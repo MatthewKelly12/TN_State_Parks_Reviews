@@ -1,0 +1,25 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "Matt the Cat",
+        "password": "none",
+        "firstName": "Matt",
+        "lastName": "Kelly",
+        "city": "Nashville",
+        "state": "Tennessee",
+        "timeStamp": 1528815377089
+      }
+    ],
+      "reviews": [
+        {
+          "id": 1,
+          "park_name": "Una Recreation Park",
+          "userId": 1,
+          "rating": 4,
+          "date": 1528815377089,
+          "title": "Terrific",
+          "comments": "The park is great, lots of fun!"
+        }
+      ]
+}
