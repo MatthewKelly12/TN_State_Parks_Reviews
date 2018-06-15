@@ -2,10 +2,8 @@
     "users": [
       {
         "id": 1,
-        "username": "Matt the Cat",
+        "username": "Matt",
         "password": "none",
-        "firstName": "Matt",
-        "lastName": "Kelly",
         "city": "Nashville",
         "state": "Tennessee",
         "timeStamp": 1528815377089

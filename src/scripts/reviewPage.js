@@ -34,7 +34,7 @@ reviewPage = (currentPark) => {
                    <p><input type="text" placeholder="Comments"></input></p>
                    <p><button id="submitReviewButton">Submit Review</button></p>
                 </div>`
- // On click on review button div opens to write review of current park
+ // On click of review button div opens to write review of current park
         $("#reviewButton").on("click", function () {
             $("#reviewRating").append(reviewDiv)
         })

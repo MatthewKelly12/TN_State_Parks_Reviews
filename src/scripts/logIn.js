@@ -1,6 +1,8 @@
 const $ = require("jquery");
 const homePage = require("./homePage");
 const reviewPage = require("./reviewPage");
+const userManager = require("./userManager");
+
 
 // Hide all pages execpt Log In page
 $(document).ready(function () {
@@ -14,8 +16,8 @@ $(document).ready(function () {
   const logInDiv =
     `<div id="mainLogIn">
         <h2>"TN State Park"</h2>
-        <p><input type="text" placeholder="User Name"></input></p>
-        <p><input type="text" placeholder="Email"></input></p>
+        <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
+        <p><input id="inputEmail" type="text" placeholder="Email"></input></p>
         <p><button id="buttonLogIn">Log In</button></p>
         <p><button id="buttonSignUp">Sign Up</button></p>
     </div>`
@@ -25,8 +27,22 @@ $(document).ready(function () {
 
     // Log In button on click will log in user, hide log in page, and show home page
     $("#buttonLogIn").on("click", function () {
-        $("#LogIn").hide()
-        $("#HomePage").show()
+
+    // Make ajax call to get all users, then check to see if username and email are both valid, else alert user
+        userManager.getAllUsers().then(
+            user => {
+                user.forEach(user => {
+                    if ($("#inputUserName").val() === user.username || $("#inputEmail").val() === user.email) {
+                        $("#LogIn").hide();
+                        $("#HomePage").show();
+                    } else {
+                        alert("Must Enter Valid User Name and Email")
+                         $("#inputUserName").val("");
+                         $("#inputEmail").val("");
+                    }
+                })
+            }
+        )
     })
 }
 
