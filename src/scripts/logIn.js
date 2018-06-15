@@ -2,6 +2,7 @@ const $ = require("jquery");
 const homePage = require("./homePage");
 const reviewPage = require("./reviewPage");
 const userManager = require("./userManager");
+const activeUser = require("./activeUser");
 
 
 // Hide all pages execpt Log In page
@@ -17,7 +18,7 @@ $(document).ready(function () {
     `<div id="mainLogIn">
         <h2>"TN State Park"</h2>
         <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
-        <p><input id="inputEmail" type="text" placeholder="Email"></input></p>
+        <p><input id="inputEmail" type="text" placeholder="Password"></input></p>
         <p><button id="buttonLogIn">Log In</button></p>
         <p><button id="buttonSignUp">Sign Up</button></p>
     </div>`
@@ -32,7 +33,8 @@ $(document).ready(function () {
         userManager.getAllUsers().then(
             user => {
                 user.forEach(user => {
-                    if ($("#inputUserName").val() === user.username || $("#inputEmail").val() === user.email) {
+                    if ($("#inputUserName").val() === user.username && $("#inputEmail").val() === user.password) {
+                        activeUser.saveActiveUser(user);
                         $("#LogIn").hide();
                         $("#HomePage").show();
                     } else {
