@@ -1,23 +1,33 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "username": "Matt",
-        "password": "none",
-        "city": "Nashville",
-        "state": "Tennessee",
-        "timeStamp": 1528815377089
-      }
-    ],
-      "reviews": [
-        {
-          "id": 1,
-          "park_name": "Una Recreation Park",
-          "userId": 1,
-          "rating": 4,
-          "date": 1528815377089,
-          "title": "Terrific",
-          "comments": "The park is great, lots of fun!"
-        }
-      ]
+  "users": [
+    {
+      "id": 1,
+      "username": "Matt",
+      "password": "none",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "zip": "37205",
+      "timeStamp": "Fri Jun 15 2018 13:25:16 GMT-0500 (CDT)"
+    },
+    {
+      "username": "Jessica",
+      "password": "none",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37076",
+      "timeStamp": "Fri Jun 15 2018 13:30:16 GMT-0500 (CDT)",
+      "id": 2
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "park_name": "Una Recreation Park",
+      "userId": 1,
+      "rating": 4,
+      "date": 1528815377089,
+      "title": "Terrific",
+      "comments": "The park is great, lots of fun!"
+    }
+  ]
 }

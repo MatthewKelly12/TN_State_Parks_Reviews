@@ -39,17 +39,20 @@ $(document).ready(function () {
     // Make ajax call to get all users, then check to see if username and email are both valid,if so log in sets acive user and set to session storage, else alert user
         userManager.getAllUsers().then(
             user => {
+                let valid = false
                 user.forEach(user => {
                     if ($("#inputUserName").val() === user.username && $("#inputEmail").val() === user.password) {
                         activeUser.saveActiveUser(user);
+                        valid = true
                         $("#LogIn").hide();
                         $("#HomePage").show();
-                    } else {
-                        alert("Must Enter Valid User Name and Email Or Sign Up")
-                         $("#inputUserName").val("");
-                         $("#inputEmail").val("");
                     }
                 })
+                if(!valid) {
+                    alert("Must Enter Valid User Name and Email Or Sign Up")
+                     $("#inputUserName").val("");
+                     $("#inputEmail").val("");
+                }
             }
         )
     })

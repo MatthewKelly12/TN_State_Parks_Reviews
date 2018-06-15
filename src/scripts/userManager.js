@@ -16,11 +16,11 @@ const userManager = Object.create(null, {
     },
     // post (create) user
     createUsers: {
-        value: function (Users) {
+        value: function (userInfo) {
             return $.ajax({
                 url: "http://localhost:8088/Users",
                 method: "POST",
-                data: Users
+                data: userInfo
             })
         }
     }
