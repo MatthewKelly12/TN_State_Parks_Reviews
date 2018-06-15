@@ -21,16 +21,18 @@ signUp = () => {
     $("#signUpPage").show();
 //  buttonSignUp on click will enter users sign up info into database of users, hide signUpDiv, show LogIn page
 $("#buttonSignUpRegister").on("click", function () {
+    // First make sure no empty data goes into database and if so alert user
     if ($("#inputRegisterUserName").val() === "" || $("#inputRegisterPassword").val() === "" ||
         $("#inputRegisterCity").val() === "" || $("#inputRegisterState").val() === "" || $("#inputRegisterZip").val() === ""){
             alert("Must fill out all input fields")
-
+            // Reset input fields
             $("#inputRegisterUserName").val("");
             $("#inputRegisterPassword").val("");
             $("#inputRegisterCity").val("");
             $("#inputRegisterState").val("");
             $("#inputRegisterZip").val("")
             } else {
+            // Create variable to hold user sign up info
              const userInfo = {
                 username: $("#inputRegisterUserName").val(),
                 password: $("#inputRegisterPassword").val(),
@@ -39,7 +41,10 @@ $("#buttonSignUpRegister").on("click", function () {
                 zip: $("#inputRegisterZip").val(),
                 timeStamp: new Date()
             }
-    userManager.createUsers(userInfo);
+    // userManager makes ajax call and puts userInfo into database
+        userManager.createUsers(userInfo);
+        $("#mainSignUp").hide();
+        $("#mainLogIn").show();
     }
 })
 
