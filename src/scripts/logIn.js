@@ -18,7 +18,7 @@ $(document).ready(function () {
     // Create variable to hold log in form
   const logInDiv =
     `<div id="mainLogIn">
-        <h2>"TN State Park"</h2>
+        <h2>TN State Parks</h2>
         <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
         <p><input id="inputEmail" type="password" placeholder="Password"></input></p>
         <p><button id="buttonLogIn">Log In</button></p>

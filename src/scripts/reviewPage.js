@@ -2,6 +2,8 @@ const $ = require("jquery");
 const parksManager = require("./parksManager");
 const homePage = require("./homePage");
 const reviewManager = require("./reviewManager");
+const userManager = require("./userManager");
+
 
 
 reviewPage = (currentPark) => {
@@ -38,26 +40,37 @@ reviewPage = (currentPark) => {
         $("#reviewButton").on("click", function () {
             $("#reviewRating").append(reviewDiv)
         })
+
+        // let activeUser = (sessionStorage.getItem("ActiveUser"))
+        // console.log(activeUser)
     // Make ajax call to get reviews of current park and display in #reviews div
-        reviewManager.getAllReviews().then(reviews =>
+
+    reviewManager.getAllReviews().then(reviews =>
         reviews.forEach(review => {
-            if (currentPark === review.park_name){
+              userManager.getAllUsers().then(users =>
+                users.forEach(user => {
+            if (currentPark === review.park_name && user.id === review.userId) {
                 const currentReview =
                  `<div id="currentReviews">
-                    <h2>User Name  ${review.date}</h2>
+                    <h2>${user.username} ${review.timeStamp}</h2>
                     <p>${review.rating} Stars</p>
                     <p>${review.title}</p>
                     <p>${review.comments}</p>
                  </div>`
             $("#reviews").append(currentReview)
-            }}))
-
+            }  }))         }))
         }
 }))
 
 }
 
 module.exports = reviewPage
+
+ // if (user.id === review.userId){
+                    //     userName = user.username
+                    // }
+// ${userName}
+
 
 
 
