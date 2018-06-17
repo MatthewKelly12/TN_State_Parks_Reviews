@@ -15,6 +15,15 @@ const reviewManager = Object.create(null, {
             return $.ajax(`http://localhost:8088/reviews?park_name=${parkName}`)
         }
     },
+    createReview: {
+        value: function (reviewInfo) {
+            return $.ajax({
+                url: "http://localhost:8088/reviews",
+                method: "POST",
+                data: reviewInfo
+            })
+        }
+    }
 
 
 })
