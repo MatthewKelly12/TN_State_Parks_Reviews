@@ -145,6 +145,24 @@
       "timeStamp": "Wed Jun 13 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
+    },
+    {
+      "park_name": "Louise and Rebecca Dudley Park",
+      "userId": "1",
+      "rating": "1",
+      "title": "Shady Place!!",
+      "comments": "Well, I wouldn't take my kids or my dog there, and I don't even have kids or a dog!!",
+      "timeStamp": "Mon Jun 18 2018 18:13:07 GMT-0500 (CDT)",
+      "id": 6
+    },
+    {
+      "park_name": "Potters Field",
+      "userId": "2",
+      "rating": "4",
+      "title": "Love it",
+      "comments": "I take my dog there on the weekends",
+      "timeStamp": "Mon Jun 18 2018 18:30:22 GMT-0500 (CDT)",
+      "id": 7
     }
   ]
 }

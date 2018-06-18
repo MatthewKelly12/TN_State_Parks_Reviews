@@ -8,14 +8,21 @@ profile = (id, name) => {
     $("#profilePage").append(profileDiv)
 
     reviewManager.getAllReviews().then(reviews =>{
-        reviews.forEach(review => {
+        reviews.forEach((review, index) => {
         if (id === review.userId) {
           const profileReviewDiv =
-             `<div id="profileReviews">
+             `<div id=${review.park_name}>
                 <h3>${review.park_name}</h3>
                 <h4>${review.timeStamp}</h4>
+                <p><button id="deleteReview${index}">Delete</button> <button id="editReview${index}">Edit</button></p>
              </div>`
              $("#profilePage").append(profileReviewDiv)
+             $(`#deleteReview${index}`).on("click", function () {
+                 console.log("delete")
+             })
+             $(`#editReview${index}`).on("click", function () {
+                console.log("edit")
+            })
         }
         })
     })

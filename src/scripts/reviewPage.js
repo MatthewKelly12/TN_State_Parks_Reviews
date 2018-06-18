@@ -3,13 +3,14 @@ const parksManager = require("./parksManager");
 const homePage = require("./homePage");
 const reviewManager = require("./reviewManager");
 const userManager = require("./userManager");
+const submitReview = require("./submitReview");
 
 
 
 reviewPage = (currentPark) => {
 //    Ajax call to get all parks then make a div of the current park selected
     parksManager.getAllParks().then(parks =>
-    parks.forEach(park => {
+    parks.forEach((park, index) => {
         if (park.park_name === currentPark){
             const currentParkDiv =
                  `<div>
@@ -40,28 +41,30 @@ reviewPage = (currentPark) => {
                  </div>`
             $("#reviews").append(currentReview)
             }}))}))
-            const reviewDiv =
-                `<div>
-                   <h2>Please Rate
-                    <select id="rating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select></h2>
-                   <p><input id="reviewTitle" type="text" placeholder="Title"></input></p>
-                   <p><input id="reviewComments" type="text" placeholder="Comments"></input></p>
-                   <p><button id="submitReviewButton">Submit Review</button></p>
-                </div>`
+            // const reviewDiv =
+            //     `<div>
+            //        <h2>Please Rate
+            //         <select id="rating">
+            //             <option value="1">1</option>
+            //             <option value="2">2</option>
+            //             <option value="3">3</option>
+            //             <option value="4">4</option>
+            //             <option value="5">5</option>
+            //         </select></h2>
+            //        <p><input id="reviewTitle${index}" type="text" placeholder="Title"></input></p>
+            //        <p><input id="reviewComments${index}" type="text" placeholder="Comments"></input></p>
+            //        <p><button id="submitReviewButton${index}">Submit Review</button></p>
+            //     </div>`
 
             // On click of review button div opens to write review of current park
         $("#reviewButton").on("click", function () {
-            $("#reviewRating").append(reviewDiv)
+            console.log("review clicked")
+            submitReview(park.park_name, index)
+            // $("#reviewRating").append(reviewDiv)
+            // $("#reviewRating").show()
         })
 
-        // $("#submitReviewButton").on("click", function () {
-        //     debugger
+        // $(`#submitReviewButton${index}`).on("click", function () {
         //     console.log("fired")
         // let activeUser = (sessionStorage.getItem("ActiveUser"))
         //      console.log(activeUser)

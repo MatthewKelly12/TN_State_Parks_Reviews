@@ -13,7 +13,10 @@ const activeUser = Object.create(null, {
             sessionStorage.setItem("ActiveUser", JSON.stringify({
                     "id": user.id,
                     "username": user.username,
-                    "password": user.password
+                    "city": user.city,
+                    "state": user.state,
+                    "zip": user.zip,
+                    "timeStamp": user.timeStamp
                 }))
         }
     },
