@@ -60,23 +60,22 @@ reviewPage = (currentPark) => {
             $("#reviewRating").append(reviewDiv)
         })
 
-
-
-        $("#submitReviewButton").on("click", function () {
-            console.log("Submit Button Clicked");
-            let activeUser = (sessionStorage.getItem("ActiveUser"))
-             console.log(activeUser)
-        let reviewInfo = {
-            park_name: park.park_name,
-            userId: activeUser.id,
-            rating: $("#rating").val(),
-            title: $("#reviewTitle").val(),
-            comments: $("#reviewComments").val(),
-            timeStamp: new Date()
-        }
-        console.log(reviewInfo)
+        // $("#submitReviewButton").on("click", function () {
+        //     debugger
+        //     console.log("fired")
+        // let activeUser = (sessionStorage.getItem("ActiveUser"))
+        //      console.log(activeUser)
+        // let reviewInfo = {
+        //     park_name: park.park_name,
+        //     userId: activeUser,
+        //     rating: $("#rating").val(),
+        //     title: $("#reviewTitle").val(),
+        //     comments: $("#reviewComments").val(),
+        //     timeStamp: new Date()
+        // }
+        // console.log(reviewInfo)
             // reviewManager.createReview(reviewInfo);
-        })
+        // })
         }
 }))
 }
