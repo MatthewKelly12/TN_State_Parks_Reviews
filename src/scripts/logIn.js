@@ -5,6 +5,7 @@ const userManager = require("./userManager");
 const activeUser = require("./activeUser");
 const signUp = require("./signUp");
 const navBar = require("./navBar");
+const profile = require("./profile");
 
 
 // Hide all pages execpt Log In page
@@ -13,7 +14,9 @@ $(document).ready(function () {
     $("#ReviewPage").hide();
     $("#signUpPage").hide();
     $("#navBar").hide();
+    $("#profilePage").hide();
 });
+
 
 
  logIn = () => {
@@ -51,6 +54,11 @@ $(document).ready(function () {
                         $("#navBar").show();
                     }
                 })
+                let userCurrent = activeUser.getActiveUser()
+                    console.log(JSON.stringify(userCurrent))
+                if (userCurrent) {
+                    profile((userCurrent.username))
+                }
                 if(!valid) {
                     alert("Must Enter Valid User Name and Email Or Sign Up")
                      $("#inputUserName").val("");

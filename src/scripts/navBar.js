@@ -1,5 +1,6 @@
 const $ = require("jquery");
 const activeUser = require("./activeUser");
+const profile = require("./profile");
 
 navBar = () => {
     const navBar =
@@ -15,6 +16,7 @@ navBar = () => {
         $("#ReviewPage").hide()
         $("#HomePage").show()
         $("#navBar").show()
+        $("#profilePage").hide();
     })
 
     $("#logOut").on("click", function () {
@@ -23,9 +25,17 @@ navBar = () => {
         $("#HomePage").hide()
         activeUser.clearActiveUser()
         $("#navBar").hide()
+        $("#profilePage").hide();
         $("#LogIn").show()
         $("#inputUserName").val("");
         $("#inputEmail").val("");
+     })
+
+     $("#profile").on("click", function () {
+        console.log("clicked")
+        $("#review").hide()
+        $("#HomePage").hide()
+        $("#profilePage").show()
      })
 
 
