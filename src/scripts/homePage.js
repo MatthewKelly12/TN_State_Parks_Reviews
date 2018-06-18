@@ -2,6 +2,9 @@ const $ = require("jquery");
 const parksManager = require("./parksManager");
 const reviewPage = require("./reviewPage");
 const logIn = require("./logIn");
+const navBar = require("./navBar");
+
+
 
 // Create variable to hold current park that gets clicked/selected
 let currentPark = undefined;
@@ -27,9 +30,11 @@ parksManager.getAllParks().then(
                 .on("click", function () {
                     currentPark = park.park_name;
                     console.log(currentPark)
-                    $("#HomePage").hide();
-                    reviewPage(currentPark);
-                    $("#ReviewPage").show();
+                    $("#HomePage").hide()
+                    $("#review").show()
+                    $("#ReviewPage").show()
+                    $("#navBar").show()
+                    reviewPage(currentPark)
                 })
             }
         )

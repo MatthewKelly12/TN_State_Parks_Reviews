@@ -4,6 +4,7 @@ const reviewPage = require("./reviewPage");
 const userManager = require("./userManager");
 const activeUser = require("./activeUser");
 const signUp = require("./signUp");
+const navBar = require("./navBar");
 
 
 // Hide all pages execpt Log In page
@@ -11,6 +12,7 @@ $(document).ready(function () {
     $("#HomePage").hide();
     $("#ReviewPage").hide();
     $("#signUpPage").hide();
+    $("#navBar").hide();
 });
 
 
@@ -46,6 +48,7 @@ $(document).ready(function () {
                         valid = true
                         $("#LogIn").hide();
                         $("#HomePage").show();
+                        $("#navBar").show();
                     }
                 })
                 if(!valid) {
