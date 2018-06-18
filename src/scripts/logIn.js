@@ -57,7 +57,7 @@ $(document).ready(function () {
                 let userCurrent = activeUser.getActiveUser()
                     console.log(JSON.stringify(userCurrent))
                 if (userCurrent) {
-                    profile((userCurrent.username))
+                    profile(userCurrent.id, userCurrent.username)
                 }
                 if(!valid) {
                     alert("Must Enter Valid User Name and Email Or Sign Up")
