@@ -163,6 +163,51 @@
       "comments": "I take my dog there on the weekends",
       "timeStamp": "Mon Jun 18 2018 18:30:22 GMT-0500 (CDT)",
       "id": 7
+    },
+    {
+      "park_name": "East Park",
+      "userId": "2",
+      "rating": "1",
+      "title": "Sucks!",
+      "comments": "Hate it! Stupid people",
+      "timeStamp": "Mon Jun 18 2018 21:34:15 GMT-0500 (CDT)",
+      "id": 8
+    },
+    {
+      "park_name": "Ezell Road Park",
+      "userId": "1",
+      "rating": "5",
+      "title": "Awesome!",
+      "comments": "Very secluded, not a whole lot of people which is what I like.",
+      "timeStamp": "Tue Jun 19 2018 08:45:05 GMT-0500 (CDT)",
+      "id": 9
+    },
+    {
+      "park_name": "Ted Rhodes Park",
+      "userId": "1",
+      "rating": "4",
+      "title": "dafa",
+      "comments": "adfadf dafaf dafafd",
+      "timeStamp": "Tue Jun 19 2018 08:46:00 GMT-0500 (CDT)",
+      "id": 10
+    },
+    {
+      "park_name": "Ted Rhodes Park",
+      "userId": "1",
+      "rating": "4",
+      "title": "dafa",
+      "comments": "adfadf dafaf dafafd",
+      "timeStamp": "Tue Jun 19 2018 08:46:00 GMT-0500 (CDT)",
+      "id": 11
+    },
+    {
+      "park_name": "Rachel's Walk",
+      "userId": "2",
+      "rating": "4",
+      "title": "Nice!",
+      "comments": "Great place for the family",
+      "timeStamp": "Tue Jun 19 2018 09:01:40 GMT-0500 (CDT)",
+      "id": 12
     }
   ]
 }

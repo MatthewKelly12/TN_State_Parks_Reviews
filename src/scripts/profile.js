@@ -9,7 +9,8 @@ profile = (id, name) => {
 
     reviewManager.getAllReviews().then(reviews =>{
         reviews.forEach((review, index) => {
-        if (id === review.userId) {
+        let userId = parseInt(review.userId)
+        if (id === userId) {
           const profileReviewDiv =
              `<div id=${review.park_name}>
                 <h3>${review.park_name}</h3>
