@@ -11,8 +11,8 @@ const reviewManager = Object.create(null, {
         }
     },
     getSingleReview: {
-        value: function (parkName) {
-            return $.ajax(`http://localhost:8088/reviews?park_name=${parkName}`)
+        value: function (id) {
+            return $.ajax(`http://localhost:8088/reviews/${id}`)
         }
     },
     createReview: {
@@ -32,12 +32,12 @@ const reviewManager = Object.create(null, {
             })
         }
     },
-    updateNews: {
-        value: function (id, News) {
+    updateReviews: {
+        value: function (id, Review) {
             return $.ajax({
                 url: `http://localhost:8088/reviews/${id}`,
                 method: "PUT",
-                data:News
+                data: Review
             })
         }
     }

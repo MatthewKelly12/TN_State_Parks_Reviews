@@ -4,8 +4,8 @@ const reviewManager = require("./reviewManager");
 
  //  <div>${id}</div>
 profile = (id, name) => {
-    const profileDiv = `<div><h2>${name}</h2></div>`
-    $("#profilePage").append(profileDiv)
+    const profileDiv = `<div><h1>${name}</h1></div>`
+    $("#profileInfo").append(profileDiv)
 
     reviewManager.getAllReviews().then(reviews =>{
         reviews.forEach((review, index) => {
@@ -18,12 +18,17 @@ profile = (id, name) => {
                 <h4>${review.timeStamp}</h4>
                 <button id="deleteReview${index}">Delete</button> <button id="editReview${index}">Edit</button>
              </div>`
-             $("#profilePage").append(profileReviewDiv)
+             $("#profileReviews").append(profileReviewDiv)
         }
            $(`#deleteReview${index}`).on("click", function (event) {
             reviewManager.deleteReview(reviewId)
             console.log(reviewId)
             console.log(review.park_name)
+           })
+
+           $(`#editReview${index}`).on("click", function (event) {
+               editedReview(reviewId)
+               console.log("edit")
            })
       })
     })
@@ -32,8 +37,6 @@ profile = (id, name) => {
 
 
 
-// $(`#editReview${index}`).on("click", function (event) {
-//    console.log("edit")
-// })
+
 
 module.exports = profile

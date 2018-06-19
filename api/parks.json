@@ -111,28 +111,10 @@
   ],
   "reviews": [
     {
-      "id": 1,
-      "park_name": "Una Recreation Park",
-      "userId": "1",
-      "rating": "4",
-      "timeStamp": "Fri Jun 15 2018 13:25:16 GMT-0500 (CDT)",
-      "title": "Terrific",
-      "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
-    },
-    {
       "id": 2,
       "park_name": "Una Recreation Park",
       "userId": "2",
       "rating": 4,
-      "timeStamp": "Thur Jun 14 2018 13:25:16 GMT-0500 (CDT)",
-      "title": "Terrific",
-      "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
-    },
-    {
-      "id": 3,
-      "park_name": "Potters Field",
-      "userId": "1",
-      "rating": "4",
       "timeStamp": "Thur Jun 14 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
@@ -194,10 +176,10 @@
     {
       "park_name": "Clinton B. Fisk Park",
       "userId": "1",
-      "rating": "1",
-      "title": "Clinton?!",
-      "comments": "I hate it just because of the name!",
-      "timeStamp": "Tue Jun 19 2018 11:09:13 GMT-0500 (CDT)",
+      "rating": "4",
+      "title": "Love it now!!",
+      "comments": "I changed my mind. ",
+      "timeStamp": "Tue Jun 19 2018 14:56:17 GMT-0500 (CDT)",
       "id": 15
     }
   ]
