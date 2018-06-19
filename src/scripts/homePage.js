@@ -31,8 +31,11 @@ parksManager.getAllParks().then(
                     currentPark = park.park_name;
                     console.log(currentPark)
                     $("#HomePage").hide()
+                    $("#reviewRating").empty()
                     $("#reviewRating").hide()
+                    $("#reviews").empty()
                     $("#review").show()
+                    $("#ReviewPage").empty()
                     $("#ReviewPage").show()
                     $("#navBar").show()
                     reviewPage(currentPark)

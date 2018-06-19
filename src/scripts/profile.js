@@ -2,7 +2,6 @@ const $ = require("jquery");
 const activeUser = require("./activeUser");
 const reviewManager = require("./reviewManager");
 
- //  <div>${id}</div>
 profile = (id, name) => {
     const profileDiv = `<div><h1>${name}</h1></div>`
     $("#profileInfo").append(profileDiv)
