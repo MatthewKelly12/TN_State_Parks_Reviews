@@ -23,9 +23,24 @@ const reviewManager = Object.create(null, {
                 data: reviewInfo
             })
         }
+    },
+    deleteReview: {
+        value: function (id) {
+            return $.ajax({
+                url: `http://localhost:8088/reviews/${id}`,
+                method: "DELETE"
+            })
+        }
+    },
+    updateNews: {
+        value: function (id, News) {
+            return $.ajax({
+                url: `http://localhost:8088/reviews/${id}`,
+                method: "PUT",
+                data:News
+            })
+        }
     }
-
-
 })
 
 module.exports = reviewManager

@@ -26,8 +26,8 @@ submitReview = (parkName, index) =>{
              console.log(user.id)
         let reviewInfo = {
             park_name: parkName,
-            userId: Number(user.id),
-            rating: Number($(`#rating${index}`).val()),
+            userId: user.id,
+            rating: $(`#rating${index}`).val(),
             title: $(`#reviewTitle${index}`).val(),
             comments: $(`#reviewComments${index}`).val(),
             timeStamp: new Date()

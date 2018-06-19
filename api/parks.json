@@ -113,8 +113,8 @@
     {
       "id": 1,
       "park_name": "Una Recreation Park",
-      "userId": 1,
-      "rating": 4,
+      "userId": "1",
+      "rating": "4",
       "timeStamp": "Fri Jun 15 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
@@ -122,7 +122,7 @@
     {
       "id": 2,
       "park_name": "Una Recreation Park",
-      "userId": 2,
+      "userId": "2",
       "rating": 4,
       "timeStamp": "Thur Jun 14 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
@@ -131,8 +131,8 @@
     {
       "id": 3,
       "park_name": "Potters Field",
-      "userId": 1,
-      "rating": 4,
+      "userId": "1",
+      "rating": "4",
       "timeStamp": "Thur Jun 14 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
@@ -140,20 +140,11 @@
     {
       "id": 4,
       "park_name": "Potters Field",
-      "userId": 3,
-      "rating": 4,
+      "userId": "3",
+      "rating": "4",
       "timeStamp": "Wed Jun 13 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
-    },
-    {
-      "park_name": "Louise and Rebecca Dudley Park",
-      "userId": "1",
-      "rating": "1",
-      "title": "Shady Place!!",
-      "comments": "Well, I wouldn't take my kids or my dog there, and I don't even have kids or a dog!!",
-      "timeStamp": "Mon Jun 18 2018 18:13:07 GMT-0500 (CDT)",
-      "id": 6
     },
     {
       "park_name": "Potters Field",
@@ -174,33 +165,6 @@
       "id": 8
     },
     {
-      "park_name": "Ezell Road Park",
-      "userId": "1",
-      "rating": "5",
-      "title": "Awesome!",
-      "comments": "Very secluded, not a whole lot of people which is what I like.",
-      "timeStamp": "Tue Jun 19 2018 08:45:05 GMT-0500 (CDT)",
-      "id": 9
-    },
-    {
-      "park_name": "Ted Rhodes Park",
-      "userId": "1",
-      "rating": "4",
-      "title": "dafa",
-      "comments": "adfadf dafaf dafafd",
-      "timeStamp": "Tue Jun 19 2018 08:46:00 GMT-0500 (CDT)",
-      "id": 10
-    },
-    {
-      "park_name": "Ted Rhodes Park",
-      "userId": "1",
-      "rating": "4",
-      "title": "dafa",
-      "comments": "adfadf dafaf dafafd",
-      "timeStamp": "Tue Jun 19 2018 08:46:00 GMT-0500 (CDT)",
-      "id": 11
-    },
-    {
       "park_name": "Rachel's Walk",
       "userId": "2",
       "rating": "4",
@@ -208,6 +172,33 @@
       "comments": "Great place for the family",
       "timeStamp": "Tue Jun 19 2018 09:01:40 GMT-0500 (CDT)",
       "id": 12
+    },
+    {
+      "park_name": "Elizabeth Park",
+      "userId": "8",
+      "rating": "2",
+      "title": "Not going again",
+      "comments": "Every time I go here, I get harassed by the locals",
+      "timeStamp": "Tue Jun 19 2018 09:11:10 GMT-0500 (CDT)",
+      "id": 13
+    },
+    {
+      "park_name": "Richland Park",
+      "userId": "1",
+      "rating": "5",
+      "title": "Richland is great!",
+      "comments": "Fun for the whole family or just couples! Check out the farmers's market on Saturdays!",
+      "timeStamp": "Tue Jun 19 2018 11:07:22 GMT-0500 (CDT)",
+      "id": 14
+    },
+    {
+      "park_name": "Clinton B. Fisk Park",
+      "userId": "1",
+      "rating": "1",
+      "title": "Clinton?!",
+      "comments": "I hate it just because of the name!",
+      "timeStamp": "Tue Jun 19 2018 11:09:13 GMT-0500 (CDT)",
+      "id": 15
     }
   ]
 }
