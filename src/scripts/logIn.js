@@ -6,6 +6,8 @@ const activeUser = require("./activeUser");
 const signUp = require("./signUp");
 const navBar = require("./navBar");
 const profile = require("./profile");
+const options = require("./options");
+const parksManager = require("./parksManager");
 
 
 // Hide all pages execpt Log In page
@@ -15,6 +17,7 @@ $(document).ready(function () {
     $("#signUpPage").hide();
     $("#navBar").hide();
     $("#profilePage").hide();
+    $("#options").hide();
 });
 
 
@@ -50,7 +53,9 @@ $(document).ready(function () {
                         activeUser.saveActiveUser(user);
                         valid = true
                         $("#LogIn").hide();
-                        $("#HomePage").show();
+                        // $("#HomePage").show();
+                        options();
+                        $("#options").show();
                         $("#navBar").show();
                     }
                 })

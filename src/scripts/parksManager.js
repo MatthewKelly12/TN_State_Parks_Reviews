@@ -12,8 +12,11 @@ const parksManager = Object.create(null, {
             return $.ajax(`https://data.nashville.gov/resource/xbru-cfzi.json?park_name=${parkName}`)
         }
     },
-
-
+    getCategoryPark: {
+        value: function (property) {
+            return $.ajax(`https://data.nashville.gov/resource/xbru-cfzi.json?${property}=yes`)
+        }
+    }
 })
 
 module.exports = parksManager

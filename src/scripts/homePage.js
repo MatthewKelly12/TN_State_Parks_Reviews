@@ -7,7 +7,7 @@ const navBar = require("./navBar");
 
 
 // Create variable to hold current park that gets clicked/selected
-let currentPark = undefined;
+
 
 // Ajax call to get all park locations and make a div for each park w/name and location
 parksManager.getAllParks().then(
@@ -28,7 +28,7 @@ parksManager.getAllParks().then(
             $(`#buttonDetails${index}`).on("click", evt =>
                 console.log(evt.target.parentElement))
                 .on("click", function () {
-                    currentPark = park.park_name;
+                    let currentPark = park.park_name;
                     console.log(currentPark)
                     $("#HomePage").hide()
                     $("#reviewRating").empty()

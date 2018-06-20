@@ -179,7 +179,7 @@
       "rating": "5",
       "title": "Love it now",
       "comments": "I changed my mind. ",
-      "timeStamp": "Wed Jun 20 2018 11:13:34 GMT-0500 (CDT)",
+      "timeStamp": "Wed Jun 20 2018 11:46:01 GMT-0500 (CDT)",
       "id": 15
     },
     {
@@ -190,15 +190,6 @@
       "comments": "im greg",
       "timeStamp": "Wed Jun 20 2018 08:38:18 GMT-0500 (CDT)",
       "id": 17
-    },
-    {
-      "park_name": "Oakwood Park",
-      "userId": "1",
-      "rating": "2",
-      "title": "Does this place exist?",
-      "comments": "Somehow I couldn't find the park. ",
-      "timeStamp": "Wed Jun 20 2018 08:54:34 GMT-0500 (CDT)",
-      "id": 18
     },
     {
       "park_name": "Mildred Shute Minipark",
@@ -217,6 +208,24 @@
       "comments": "Geez don't waste your time",
       "timeStamp": "Wed Jun 20 2018 08:56:38 GMT-0500 (CDT)",
       "id": 20
+    },
+    {
+      "park_name": "Potters Field",
+      "userId": "1",
+      "rating": "5",
+      "title": "Weird Place??!!",
+      "comments": "Does anyone else feel this way?",
+      "timeStamp": "Wed Jun 20 2018 11:43:15 GMT-0500 (CDT)",
+      "id": 21
+    },
+    {
+      "park_name": "Metro Soccer Complex",
+      "userId": "2",
+      "rating": "1",
+      "title": "",
+      "comments": "",
+      "timeStamp": "Wed Jun 20 2018 13:18:14 GMT-0500 (CDT)",
+      "id": 22
     }
   ]
 }

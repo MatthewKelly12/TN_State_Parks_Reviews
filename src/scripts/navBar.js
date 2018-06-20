@@ -41,8 +41,6 @@ navBar = () => {
 
 }
 
-
-
 navBar()
 
 module.exports = navBar
