@@ -21,7 +21,6 @@ submitReview = (parkName, index) =>{
     $("#reviewRating").show()
 
     $(`#submitReviewButton${index}`).on("click", function () {
-            console.log("fired")
         let user = (activeUser.getActiveUser())
              console.log(user.id)
         let reviewInfo = {
@@ -32,8 +31,10 @@ submitReview = (parkName, index) =>{
             comments: $(`#reviewComments${index}`).val(),
             timeStamp: new Date()
         }
-        console.log(reviewInfo)
+            console.log(reviewInfo)
             reviewManager.createReview(reviewInfo);
+            $("#reviewRating").empty()
+            $("#reviewRating").hide()
         })
 }
 

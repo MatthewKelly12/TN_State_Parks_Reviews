@@ -4,6 +4,7 @@ const homePage = require("./homePage");
 const reviewManager = require("./reviewManager");
 const userManager = require("./userManager");
 const submitReview = require("./submitReview");
+const monthOfYear = require("./month");
 
 
 
@@ -33,9 +34,15 @@ reviewPage = (currentPark) => {
                     let reviewId = parseInt(review.userId)
     // Ajax call to check all users to see if user id matches review userId
             if (currentPark === review.park_name && user.id === reviewId) {
+
+                const date = new Date(review.timeStamp);
+                let month = date.getMonth();
+                month = monthOfYear(month);
+                const day =   date.getDate();
+                const year =  date.getFullYear();
                 const currentReview =
                  `<div id="currentReviews">
-                    <h3>${user.username} ${review.timeStamp}</h3>
+                    <h3>${user.username} ${month}, ${day} ${year}</h3>
                     <p>${review.rating} Stars</p>
                     <p>${review.title}</p>
                     <p>${review.comments}</p>

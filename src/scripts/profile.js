@@ -10,11 +10,19 @@ profile = (id, name) => {
         reviews.forEach((review, index) => {
         let reviewId = review.id
         let reviewUserId = parseInt(review.userId)
+
+        const date = new Date(review.timeStamp);
+        let month = date.getMonth();
+        month = monthOfYear(month);
+        const day =   date.getDate();
+        const year =  date.getFullYear();
         if (id === reviewUserId) {
           const profileReviewDiv =
              `<div id=${review.park_name}>
-                <h3>${review.park_name}</h3>
-                <h4>${review.timeStamp}</h4>
+                <h3>${review.park_name} ${month}, ${day} ${year}</h3>
+                <h3>${review.rating} Stars</h3>
+                <p>${review.title}</p>
+                <p>${review.comments}</p>
                 <button id="deleteReview${index}">Delete</button> <button id="editReview${index}">Edit</button>
              </div>`
              $("#profileReviews").append(profileReviewDiv)
