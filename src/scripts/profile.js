@@ -1,6 +1,7 @@
 const $ = require("jquery");
 const activeUser = require("./activeUser");
 const reviewManager = require("./reviewManager");
+const stars = require("./stars");
 
 profile = (id, name) => {
     const profileDiv = `<div><h1>${name}</h1></div>`
@@ -16,11 +17,13 @@ profile = (id, name) => {
         month = monthOfYear(month);
         const day =   date.getDate();
         const year =  date.getFullYear();
+        let reviewStars = undefined;
+        reviewStars = stars(parseInt(review.rating));
         if (id === reviewUserId) {
           const profileReviewDiv =
              `<div id=${review.park_name}>
                 <h3>${review.park_name} ${month}, ${day} ${year}</h3>
-                <h3>${review.rating} Stars</h3>
+                <h3>${review.rating} Stars ${reviewStars}</h3>
                 <p>${review.title}</p>
                 <p>${review.comments}</p>
                 <button id="deleteReview${index}">Delete</button> <button id="editReview${index}">Edit</button>

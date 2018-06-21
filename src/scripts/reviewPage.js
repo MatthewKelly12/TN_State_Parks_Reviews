@@ -5,6 +5,7 @@ const reviewManager = require("./reviewManager");
 const userManager = require("./userManager");
 const submitReview = require("./submitReview");
 const monthOfYear = require("./month");
+const stars = require("./stars");
 
 
 
@@ -39,10 +40,13 @@ reviewPage = (currentPark) => {
                 month = monthOfYear(month);
                 const day = date.getDate();
                 const year =  date.getFullYear();
+                let reviewStars = undefined;
+                reviewStars = stars(parseInt(review.rating));
+
                 const currentReview =
                  `<div id="currentReviews">
                     <h3>${user.username} ${month}, ${day} ${year}</h3>
-                    <p>${review.rating} Stars</p>
+                    <p>${review.rating} Stars ${reviewStars}</span></p>
                     <p>${review.title}</p>
                     <p>${review.comments}</p>
                  </div>`
