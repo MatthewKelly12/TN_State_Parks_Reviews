@@ -14,7 +14,7 @@ const parksManager = Object.create(null, {
     },
     getCategoryPark: {
         value: function (property) {
-            return $.ajax(`https://data.nashville.gov/resource/xbru-cfzi.json?${property}=yes`)
+            return $.ajax(`https://data.nashville.gov/resource/xbru-cfzi.json?${property}=Yes`)
         }
     }
 })

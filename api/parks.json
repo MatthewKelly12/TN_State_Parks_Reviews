@@ -129,15 +129,6 @@
   ],
   "reviews": [
     {
-      "id": 2,
-      "park_name": "Una Recreation Park",
-      "userId": "2",
-      "rating": 4,
-      "timeStamp": "Thur Jun 14 2018 13:25:16 GMT-0500 (CDT)",
-      "title": "Terrific",
-      "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
-    },
-    {
       "id": 4,
       "park_name": "Potters Field",
       "userId": "3",
@@ -145,33 +136,6 @@
       "timeStamp": "Wed Jun 13 2018 13:25:16 GMT-0500 (CDT)",
       "title": "Terrific",
       "comments": "Great park, plenty of parking and no perverted weirdos hanging out"
-    },
-    {
-      "park_name": "Potters Field",
-      "userId": "2",
-      "rating": "4",
-      "title": "Love it",
-      "comments": "I take my dog there on the weekends",
-      "timeStamp": "Mon Jun 18 2018 18:30:22 GMT-0500 (CDT)",
-      "id": 7
-    },
-    {
-      "park_name": "East Park",
-      "userId": "2",
-      "rating": "1",
-      "title": "Sucks!",
-      "comments": "Hate it! Stupid people",
-      "timeStamp": "Mon Jun 18 2018 21:34:15 GMT-0500 (CDT)",
-      "id": 8
-    },
-    {
-      "park_name": "Rachel's Walk",
-      "userId": "2",
-      "rating": "4",
-      "title": "Nice!",
-      "comments": "Great place for the family",
-      "timeStamp": "Tue Jun 19 2018 09:01:40 GMT-0500 (CDT)",
-      "id": 12
     },
     {
       "park_name": "Elizabeth Park",
@@ -192,24 +156,6 @@
       "id": 17
     },
     {
-      "park_name": "Mildred Shute Minipark",
-      "userId": "1",
-      "rating": "5",
-      "title": "Kids dig it!",
-      "comments": "It's a minipark but it sure is fun. Kids wanna go all the time ",
-      "timeStamp": "Wed Jun 20 2018 09:37:15 GMT-0500 (CDT)",
-      "id": 19
-    },
-    {
-      "park_name": "Metro Soccer Complex",
-      "userId": "2",
-      "rating": "1",
-      "title": "",
-      "comments": "",
-      "timeStamp": "Wed Jun 20 2018 13:18:14 GMT-0500 (CDT)",
-      "id": 22
-    },
-    {
       "park_name": "Potters Field",
       "userId": "14",
       "rating": "5",
@@ -219,31 +165,22 @@
       "id": 24
     },
     {
-      "park_name": "Elizabeth Park",
-      "userId": "1",
-      "rating": "2",
-      "title": "Shady",
-      "comments": "Ugh",
-      "timeStamp": "Wed Jun 20 2018 20:42:56 GMT-0500 (CDT)",
+      "park_name": "Potters Field",
+      "userId": "2",
+      "rating": "4",
+      "title": "Great ",
+      "comments": "Love this place!",
+      "timeStamp": "Fri Jun 22 2018 20:32:01 GMT-0500 (CDT)",
       "id": 25
     },
     {
-      "park_name": "Buena Vista Park",
+      "park_name": "Potters Field",
       "userId": "1",
-      "rating": "4",
-      "title": "Nice hangout!",
-      "comments": "I usually go here to wait for traffice",
-      "timeStamp": "Wed Jun 20 2018 20:43:53 GMT-0500 (CDT)",
+      "rating": "1",
+      "title": "dooooo",
+      "comments": "yeeeee",
+      "timeStamp": "Sat Jun 23 2018 11:57:07 GMT-0500 (CDT)",
       "id": 26
-    },
-    {
-      "park_name": "East Park",
-      "userId": "1",
-      "rating": "3",
-      "title": "It's ok??",
-      "comments": "I come here all the time just because its close. You can always score a free ipa from some local hipsters too!",
-      "timeStamp": "Wed Jun 20 2018 21:52:12 GMT-0500 (CDT)",
-      "id": 27
     }
   ]
 }

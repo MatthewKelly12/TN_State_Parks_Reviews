@@ -1,6 +1,7 @@
 const $ = require("jquery");
-
+// stars function to convert review ratings to stars on the page
 stars = (rating) => {
+// create variables for stars
     let oneStar = `
                 <span class="fa fa-star checked"></span>`
     let twoStar = `
@@ -21,6 +22,8 @@ stars = (rating) => {
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>`
+
+// Review rating will be passed as argument to determine # of stars on page
     switch(rating) {
         case 1 : return oneStar
             break;

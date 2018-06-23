@@ -35,7 +35,11 @@ submitReview = (parkName, index) =>{
             reviewManager.createReview(reviewInfo);
             $("#reviewRating").empty()
             $("#reviewRating").hide()
-        })
+            $("#ReviewPage").empty()
+            $("#reviews").empty()
+            $("#parkInfo").empty()
+            reviewPage(parkName)
+         })
 }
 
 module.exports = submitReview

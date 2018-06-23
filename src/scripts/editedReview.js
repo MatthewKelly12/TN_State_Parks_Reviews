@@ -49,6 +49,9 @@ editedReview = (id) => {
         $("#editedReviews").empty()
         $("#editedReviews").hide()
         $("#profileReviews").show()
+        $("#profileInfo").empty();
+        $("#profileReviews").empty();
+        profile(user.id, user.username);
     })
     })
 }

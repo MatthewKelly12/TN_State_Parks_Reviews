@@ -34,11 +34,20 @@ profile = (id, name) => {
             reviewManager.deleteReview(reviewId)
             console.log(reviewId)
             console.log(review.park_name)
+            $("#profileInfo").empty();
+            $("#editedReviews").empty();
+            $("#profileReviews").empty();
+            profile(id, name);
+
            })
 
-           $(`#editReview${index}`).on("click", function (event) {
+        $(`#editReview${index}`).on("click", function (event) {
                editedReview(reviewId)
                console.log("edit")
+        // $("#profileInfo").empty();
+        // $("#profileReviews").empty();
+        // $("#profileReviews").show()
+        //     profile(id, name);
            })
       })
     })

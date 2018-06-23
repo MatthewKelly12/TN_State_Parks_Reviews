@@ -37,6 +37,7 @@ parksManager.getAllParks().then(
                     $("#review").show()
                     $("#ReviewPage").empty()
                     $("#ReviewPage").show()
+                    $("parkInfo").empty()
                     $("#navBar").show()
                     reviewPage(currentPark)
                 })

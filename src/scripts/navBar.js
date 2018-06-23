@@ -36,6 +36,11 @@ navBar = () => {
         $("#review").hide()
         $("#HomePage").hide()
         $("#profilePage").show()
+        $("#profileInfo").empty();
+        $("#editedReviews").empty();
+        $("#profileReviews").empty();
+        let user = activeUser.getActiveUser()
+        profile(user.id, user.username);
      })
 
 
