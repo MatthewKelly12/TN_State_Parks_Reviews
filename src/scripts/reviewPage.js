@@ -11,7 +11,7 @@ const avgRating = require("./avgRating");
 
 
 reviewPage = (currentPark) => {
-    avgRating(currentPark)
+    // avgRating(currentPark)
 //    Ajax call to get all parks then make a div of the current park selected
     parksManager.getAllParks().then(parks =>
     parks.forEach((park, index) => {

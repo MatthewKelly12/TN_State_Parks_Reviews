@@ -26,10 +26,15 @@ li a:hover {
     color: orange;
 }
 
-#parkInfo {
-    max-width: 150px;
+/* #parkInfo {
+    /* max-width: 300px;
     display: block;
     margin-left: auto;
     margin-right: 48%;
-    margin-top: 1%;
-}
+    margin-top: 1%; */
+    /* display: inline-block
+} */
+/*
+#ReviewPage {
+    display: inline-block;
+}  */
