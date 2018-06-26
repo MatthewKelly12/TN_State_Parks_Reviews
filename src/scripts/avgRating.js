@@ -3,7 +3,7 @@ const reviewManager = require("./reviewManager");
 const stars = require("./stars");
 
 avgRating = (parkName) => {
-    $("#parkInfo").empty();
+    $("#avgStars").empty();
             let ratings = 0;
             let numOfRatings = 0;
     reviewManager.getAllReviews(parkName).then(reviews =>
@@ -19,7 +19,7 @@ avgRating = (parkName) => {
             let ratingStars = stars(Math.floor(avgStars))
             const parkDivInfo = `
               <div>${ratingStars}  Avg Stars ${avgStars}</div>`
-              $("#parkInfo").append(parkDivInfo)
+              $("#avgStars").append(parkDivInfo)
            }
         })
     )

@@ -26,6 +26,10 @@ li a:hover {
     color: orange;
 }
 
+.blue {
+    color: blue;
+}
+
 /* #parkInfo {
     /* max-width: 300px;
     display: block;

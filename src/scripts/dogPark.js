@@ -18,7 +18,7 @@
 //                         <button id="buttonDogParkDetails${index}">Details</button>
 //                      </div>`
 //                 // Append div of dog parks to home page
-//                 $("#dogPark").append(dogParkDiv)
+//                 $("#dogParks").append(dogParkDiv)
 
 //                 // Details button on click will assign park clicked on to current park, hide homepage and show review page  of current park selected
 //                 $(`#buttonDogParkDetails${index}`).on("click", evt =>
@@ -27,7 +27,7 @@
 //                         let currentPark = park.park_name;
 //                         console.log(currentPark)
 //                         $("#HomePage").hide()
-//                         $("#dogPark").hide()
+//                         $("#dogParks").hide()
 //                         $("#reviewRating").empty()
 //                         $("#reviewRating").hide()
 //                         $("#reviews").empty()

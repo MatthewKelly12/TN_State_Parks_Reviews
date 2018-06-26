@@ -7,7 +7,7 @@ soccerInfo = (currentPark) => {
         console.log(park)
         if (park.park_name === currentPark && park.soccer_fields === "Yes") {
              const soccer = `
-            <div id="soccerInfo${index}">Soccer Fields </div>`
+            <div id="soccerInfo${index}"> <i class="fas fa-futbol"></i> Soccer Fields </div>`
             $("#parkInfo").append(soccer);
         }})
     })

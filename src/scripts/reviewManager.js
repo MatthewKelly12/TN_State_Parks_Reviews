@@ -11,8 +11,8 @@ const reviewManager = Object.create(null, {
         }
     },
     getSingleReview: {
-        value: function (parkName) {
-            return $.ajax(`http://localhost:8088/reviews/?park_name=${parkName}`)
+        value: function (id) {
+            return $.ajax(`http://localhost:8088/reviews/${id}`)
         }
     },
     createReview: {

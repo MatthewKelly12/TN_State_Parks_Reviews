@@ -1,6 +1,7 @@
 const $ = require("jquery");
 const reviewManager = require("./reviewManager");
 const activeUser = require("./activeUser");
+const avgRating = require("./avgRating");
 
 submitReview = (parkName, index) =>{
         const reviewDiv =
@@ -37,8 +38,9 @@ submitReview = (parkName, index) =>{
             $("#reviewRating").hide()
             $("#ReviewPage").empty()
             $("#reviews").empty()
-            $("#parkInfo").empty()
+            // $("#parkInfo").empty()
             reviewPage(parkName)
+            avgRating(parkName)
          })
 }
 

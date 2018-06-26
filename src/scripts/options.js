@@ -1,7 +1,7 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 const logIn = require("./logIn");
-const dogPark = require("./dogPark");
+const dogParks = require("./dogPark");
 
 options = () => {
 
@@ -17,6 +17,10 @@ options = () => {
             if (category === "All Parks") {
                 $("#options").hide();
                 $("#HomePage").show();
+            }
+            if (category === "Dog Park"){
+                dogPark();
+                $("#options").hide();
             }
         })
     })

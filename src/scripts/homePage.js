@@ -16,7 +16,7 @@ const golfInfo = require("./golfInfo")
 const horseTrailInfo = require("./horseTrailInfo")
 const lakeInfo = require("./lakeInfo")
 const picnicInfo = require("./picnicInfo")
-const playgroundInfo = require("./playground")
+const playground = require("./playground")
 const restroomsInfo = require("./restroomsInfo")
 const skateParkInfo = require("./skateParkInfo")
 const soccerInfo = require("./soccerInfo")
@@ -60,6 +60,8 @@ parksManager.getAllParks().then(
                     $("#navBar").show()
                     reviewPage(currentPark)
                     $("parkInfo").empty()
+
+
                     avgRating(currentPark)
                     adaInfo(currentPark)
                     boatInfo(currentPark)
