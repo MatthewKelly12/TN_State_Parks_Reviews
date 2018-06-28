@@ -18,6 +18,7 @@ $(document).ready(function () {
     $("#navBar").hide();
     $("#profilePage").hide();
     $("#options").hide();
+    $("#parkContainer").hide()
 });
 
 

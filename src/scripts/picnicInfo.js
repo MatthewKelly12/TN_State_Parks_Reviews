@@ -6,7 +6,7 @@ picnicInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.picnic_shelters === "Yes") {
              const picnic = `
-            <div id="picnicInfo${index}">Picnic Shelters: ${park.picnic_shelters_quantity}
+            <div id="picnicInfo${index}"><h3>Picnic Shelters: ${park.picnic_shelters_quantity}</h3>
             </div>`
             $("#parkInfo").append(picnic);
         }})

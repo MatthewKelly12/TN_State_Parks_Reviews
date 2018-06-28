@@ -9,7 +9,7 @@ ul {
 }
 
 li {
-    float: left;
+    float: right;
 }
 
 li a {
@@ -45,13 +45,7 @@ li a:hover {
     display: inline-block
 }  */
 
-#ReviewPage {
-    display: inline-block;
-    /* background-color: green; */
-    font-family: verdana;
-    font-size: 100%;
-    /* color: #ffffff; */
-}
+
 
 body {
     /* background-color: green; */
@@ -148,4 +142,65 @@ h3 {
     margin-right: auto;
     text-align: center;
     border: 2px solid white;
+}
+
+
+#parkContainer {
+    width: 1200px;
+    height: 450px;
+    background-color: green;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+#parkPhoto {
+    float: left;
+    width: 460px;
+    line-height: 400px;
+    margin: 25px;
+    border: 4px solid white;
+}
+
+#ReviewPage {
+    float: left;
+    width: 300px;
+    height: 400px;
+    margin-left: 25px;
+    margin-right: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* border: 2px solid white; */
+}
+#currentPark {
+    display: block;
+    width: 300px;
+    height: 400px;
+    /* padding: 10px; */
+    text-align: center;
+    background-color: green;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* border: 2px solid white; */
+}
+
+#starAmenities {
+    float: right;
+    width: 325px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* border: 2px solid white; */
+}
+
+ /* #ReviewPage {
+    display: inline-block;
+    /* background-color: green;
+    font-family: verdana;
+    font-size: 100%;
+    /* color: #ffffff;
+}  */
+
+.white {
+    color: white;
 }

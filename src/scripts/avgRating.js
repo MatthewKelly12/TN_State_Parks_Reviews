@@ -20,7 +20,7 @@ avgRating = (parkName) => {
                     avgStars = avgStars.toFixed(1);
                     let ratingStars = stars(Math.floor(avgStars))
                      const parkDivInfo = `
-                        <div>${ratingStars}  Avg Stars ${avgStars}</div>`
+                        <div><h3>${ratingStars}  Avg Stars ${avgStars}</h3></div>`
                     $("#avgStars").html(parkDivInfo)
             //    } else if (numOfRatings === 1) {
             //     let avgStars = (ratings/numOfRatings)

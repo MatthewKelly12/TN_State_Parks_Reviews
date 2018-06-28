@@ -6,7 +6,7 @@ skateParkInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.skate_park === "Yes") {
              const skatePark = `
-            <div id="skateParkInfo${index}><img src="https://image.flaticon.com/icons/svg/86/86553.svg"> SkatePark </div>`
+            <div id="skateParkInfo${index}><h3>SkatePark</h3></div>`
             $("#parkInfo").append(skatePark);
         }})
     })

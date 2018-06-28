@@ -3,20 +3,24 @@ const activeUser = require("./activeUser");
 const profile = require("./profile");
 
 navBar = () => {
-    const navBar =
+     const navBar =
     `<ul>
-        <li><a id="home" class="active">Home</a></li>
-        <li><a id="profile">Profile</a></li>
-        <li><a id="logOut">Log Out</a></li>
+        <li><i style="font-size:35px"><a id="logOut">Log Out</a></i></li>
+        <li><a id="profile"><i class="fa fa-user" style="font-size:50px"></i></a></li>
+        <li><a id="home" class="active"><i class="fa fa-home" style="font-size:50px"></i></a></li>
     </ul>`
     $("#navBar").append(navBar)
+
 
     $("#home").on("click", function () {
         console.log("clicked")
         $("#ReviewPage").hide()
         $("#HomePage").show()
         $("#navBar").show()
+        $("#reviews").empty()
+        $("#reviews").hide()
         $("#profilePage").hide();
+        $("#parkContainer").hide();
     })
 
     $("#logOut").on("click", function () {

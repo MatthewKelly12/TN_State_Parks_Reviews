@@ -17,16 +17,17 @@ reviewPage = (currentPark) => {
     parks.forEach((park, index) => {
         if (park.park_name === currentPark){
             const currentParkDiv =
-                 `<div>
+                 `<div id="currentPark">
                     <h1>${park.park_name}</h1>
-                    <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
                     <h2>Est. ${park.year_established}</h2>
                     <h2>${park.acres} Acres</h2>
                     <p>${park.mapped_location_address}</p>
                     <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                     <p><button id="reviewButton">Write Review</button></p>
                  </div>`
-
+            const parkPhoto = `
+            <img src="./images/park-16.png" height="400" width="450" class"optionImg">`
+            $("#parkPhoto").append(parkPhoto)
 // Append div of current park to review page
              $("#ReviewPage").append(currentParkDiv)
 

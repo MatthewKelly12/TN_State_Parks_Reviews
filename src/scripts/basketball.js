@@ -6,7 +6,7 @@ basketballInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.basketball_courts === "Yes")  {
              const basketball = `
-            <div id="basketballInfo${index}"><i class="fas fa-basketball-ball"></i> Basketball Courts</div>`
+            <div id="basketballInfo${index}"><h3><i class="fas fa-basketball-ball checked"></i> Basketball Courts</h3></div>`
             $("#parkInfo").append(basketball);
         }})
     })
