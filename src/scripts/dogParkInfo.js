@@ -4,7 +4,6 @@ const parksManager = require("./parksManager");
 dogParkInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {
-        console.log(park)
         if (park.park_name === currentPark && park.dog_park === "Yes")  {
              const dogPark = `
             <div id="dogParkInfo${index}">Dog Park</div>`

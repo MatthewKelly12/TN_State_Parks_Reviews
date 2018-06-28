@@ -24,16 +24,18 @@ $(document).ready(function () {
 
  logIn = () => {
     // Create variable to hold log in form
+  const logo = `
+  <img src="./logo-1.png" class="logo">`
   const logInDiv =
     `<div id="mainLogIn">
-        <h2>TN State Parks</h2>
         <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
         <p><input id="inputEmail" type="password" placeholder="Password"></input></p>
-        <p><button id="buttonLogIn">Log In</button></p>
-        <p><button id="buttonSignUp">Sign Up</button></p>
+        <p><button id="buttonLogIn" class="btn info">Log In</button></p>
+        <p><button id="buttonSignUp" class="btn info">Sign Up</button></p>
     </div>`
 
     // Append log in form to log in page
+    $("#LogIn").append(logo)
     $("#LogIn").append(logInDiv)
 
 //  Sign Up button on click will call signUp function which hides log in and shows sign up page

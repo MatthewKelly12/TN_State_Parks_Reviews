@@ -19,7 +19,8 @@ reviewPage = (currentPark) => {
             const currentParkDiv =
                  `<div>
                     <h1>${park.park_name}</h1>
-                    <h2>Year Established ${park.year_established}</h2>
+                    <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
+                    <h2>Est. ${park.year_established}</h2>
                     <h2>${park.acres} Acres</h2>
                     <p>${park.mapped_location_address}</p>
                     <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
@@ -33,8 +34,6 @@ reviewPage = (currentPark) => {
 // Make div to write review of current park
 
  // Make ajax call to get reviews of current park and display in #reviews div
-        // let ratings = 0;
-        // let numOfRatings = 0;
     reviewManager.getAllReviews().then(reviews =>
         reviews.forEach(review => {
               userManager.getAllUsers().then(users =>
@@ -49,13 +48,6 @@ reviewPage = (currentPark) => {
                 const year =  date.getFullYear();
                 let reviewStars = undefined;
                 reviewStars = stars(parseInt(review.rating));
-                // let starAverage = avgRating(review.park_name)
-
-                // ratings+= parseInt(review.rating)
-                // numOfRatings++
-                //    console.log(ratings)
-                // console.log(numOfRatings)
-
                  const currentReview =
                  `<div id="currentReviews">
                     <h3>${user.username} ${month}, ${day} ${year}</h3>
@@ -63,14 +55,7 @@ reviewPage = (currentPark) => {
                     <p>${review.title}</p>
                     <p>${review.comments}</p>
                  </div>`
-                //  let avgStars = (ratings/numOfRatings)
-                //  avgStars= avgStars.toFixed(1);
-                //  const parkDivInfo = `
-                //          <div>${avgStars}</div>`
-                //          $("#parkInfo").append(parkDivInfo)
-
-
-            $("#reviews").append(currentReview)
+                $("#reviews").append(currentReview)
         }}))}))
 
 

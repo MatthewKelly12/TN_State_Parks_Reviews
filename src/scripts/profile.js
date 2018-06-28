@@ -2,9 +2,21 @@ const $ = require("jquery");
 const activeUser = require("./activeUser");
 const reviewManager = require("./reviewManager");
 const stars = require("./stars");
+const deleteReview = require("./deleteReview");
 
 profile = (id, name) => {
-    const profileDiv = `<div><h1>${name}</h1></div>`
+            $("#profileInfo").empty();
+            $("#editedReviews").empty();
+            $("#profileReviews").empty();
+   const user = activeUser.getActiveUser();
+   const date = new Date(user.timeStamp);
+                let month = date.getMonth();
+                month = monthOfYear(month);
+                const day = date.getDate();
+                const year =  date.getFullYear();
+   console.log(user.timeStamp)
+
+    const profileDiv = `<div id="profileDiv"><h1>${name}</h1><i class="fa fa-user" style="font-size:75px"></i><p>Member Since ${month}, ${day} ${year}</p></div>`
     $("#profileInfo").append(profileDiv)
 
     reviewManager.getAllReviews().then(reviews =>{
@@ -30,14 +42,15 @@ profile = (id, name) => {
              </div>`
              $("#profileReviews").append(profileReviewDiv)
         }
+          // deleteReview(index, parseInt(reviewId));
            $(`#deleteReview${index}`).on("click", function (event) {
-            reviewManager.deleteReview(reviewId)
-            console.log(reviewId)
-            console.log(review.park_name)
-            $("#profileInfo").empty();
-            $("#editedReviews").empty();
-            $("#profileReviews").empty();
-            profile(id, name);
+             reviewManager.deleteReview(reviewId)
+             console.log(reviewId)
+             console.log(review.park_name)
+             $("#profileInfo").empty();
+             $("#editedReviews").empty();
+             $("#profileReviews").empty();
+             profile(id, name);
 
            })
 

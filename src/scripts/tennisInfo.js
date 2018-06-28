@@ -4,7 +4,6 @@ const parksManager = require("./parksManager");
 tennisInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {
-        console.log(park)
         if (park.park_name === currentPark && park.tennis_courts === "Yes") {
              const tennis = `
             <div id="tennisInfo${index}">Tennis Courts </div>`

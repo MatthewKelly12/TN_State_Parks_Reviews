@@ -4,7 +4,6 @@ const parksManager = require("./parksManager");
 walkingInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {
-        console.log(park)
         if (park.park_name === currentPark && park.walking === "Yes") {
              const walking = `
             <div id="walkingInfo${index}">Walking Paths</div>`
