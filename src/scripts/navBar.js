@@ -13,7 +13,6 @@ navBar = () => {
 
 
     $("#home").on("click", function () {
-        console.log("clicked")
         $("#ReviewPage").hide()
         $("#HomePage").show()
         $("#navBar").show()
@@ -24,7 +23,6 @@ navBar = () => {
     })
 
     $("#logOut").on("click", function () {
-        console.log("clicked")
         $("#review").hide()
         $("#HomePage").hide()
         activeUser.clearActiveUser()
@@ -36,7 +34,6 @@ navBar = () => {
      })
 
      $("#profile").on("click", function () {
-        console.log("clicked")
         $("#review").hide()
         $("#HomePage").hide()
         $("#profilePage").show()

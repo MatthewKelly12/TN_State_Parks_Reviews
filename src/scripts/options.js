@@ -5,13 +5,13 @@ const dogParks = require("./dogPark");
 const HomePage = require("./homePage");
 
 options = () => {
-
+{/* <img src="./images/park-16.png" height="200" width="200" class"optionImg"> */}
     const categories = ["All Parks", "Boat Launch", "Dog Park", "Disc Golf", "Mountain Bike Trails", "Baseball Fields", "Basketball Courts", "Community Garden", "Skate Park", "Lake", "Hiking Trails/Path", "ADA Accessible", "Soccer Fields", "Tennis Courts", "Volleyball Courts"];
     categories.forEach((category, index) => {
         const optionDiv =
           `<div id="category${index}" class="optionDiv">
                <h1>${category}</h1>
-               <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
+               <p><img src="./images/dog.jpeg" height="200" width="200" class"optionImg"></p>
             </div>`
         $("#options").append(optionDiv)
         $(`#category${index}`).on("click", function () {

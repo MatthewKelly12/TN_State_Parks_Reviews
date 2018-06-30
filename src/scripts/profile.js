@@ -14,7 +14,6 @@ profile = (id, name) => {
                 month = monthOfYear(month);
                 const day = date.getDate();
                 const year =  date.getFullYear();
-   console.log(user.timeStamp)
 
     const profileDiv = `<div id="profileDiv"><h1>${name}</h1><i class="fa fa-user" style="font-size:75px"></i><p>Member Since ${month}, ${day} ${year}</p></div>`
     $("#profileInfo").append(profileDiv)
@@ -45,8 +44,8 @@ profile = (id, name) => {
           // deleteReview(index, parseInt(reviewId));
            $(`#deleteReview${index}`).on("click", function (event) {
              reviewManager.deleteReview(reviewId)
-             console.log(reviewId)
-             console.log(review.park_name)
+            //  console.log(reviewId)
+            //  console.log(review.park_name)
              $("#profileInfo").empty();
              $("#editedReviews").empty();
              $("#profileReviews").empty();
@@ -56,7 +55,7 @@ profile = (id, name) => {
 
         $(`#editReview${index}`).on("click", function (event) {
                editedReview(reviewId)
-               console.log("edit")
+              //  console.log("edit")
         // $("#profileInfo").empty();
         // $("#profileReviews").empty();
         // $("#profileReviews").show()

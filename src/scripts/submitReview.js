@@ -3,10 +3,16 @@ const reviewManager = require("./reviewManager");
 const activeUser = require("./activeUser");
 const avgRating = require("./avgRating");
 
-submitReview = (parkName, index) =>{
+submitReview = (parkName, index) => {
         const reviewDiv =
                 `<div>
-                   <h2>Please Rate
+                   <h2>Please Rate</h2>
+                   <h2>
+                        <span class="fa fa-star black"></span>
+                        <span class="fa fa-star black"></span>
+                        <span class="fa fa-star black"></span>
+                        <span class="fa fa-star black"></span>
+                        <span class="fa fa-star black"></span>
                     <select id="rating${index}">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -23,7 +29,6 @@ submitReview = (parkName, index) =>{
 
     $(`#submitReviewButton${index}`).on("click", function () {
         let user = (activeUser.getActiveUser())
-             console.log(user.id)
         let reviewInfo = {
             park_name: parkName,
             userId: user.id,
@@ -34,6 +39,7 @@ submitReview = (parkName, index) =>{
         }
             console.log(reviewInfo)
             reviewManager.createReview(reviewInfo);
+            $("#parkPhoto").empty()
             $("#reviewRating").empty()
             $("#reviewRating").hide()
             $("#ReviewPage").empty()

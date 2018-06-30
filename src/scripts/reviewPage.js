@@ -1,6 +1,5 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
-const homePage = require("./homePage");
 const reviewManager = require("./reviewManager");
 const userManager = require("./userManager");
 const submitReview = require("./submitReview");
@@ -8,15 +7,12 @@ const monthOfYear = require("./month");
 const stars = require("./stars");
 const avgRating = require("./avgRating");
 
-
-
 reviewPage = (currentPark) => {
-    // avgRating(currentPark)
+    clearDetails();
 //    Ajax call to get all parks then make a div of the current park selected
-    parksManager.getAllParks().then(parks =>
-    parks.forEach((park, index) => {
-        if (park.park_name === currentPark){
-            const currentParkDiv =
+    parksManager.getSinglePark(currentPark).then((p) => {
+        let park = p[0];
+        const currentParkDiv =
                  `<div id="currentPark">
                     <h1>${park.park_name}</h1>
                     <h2>Est. ${park.year_established}</h2>
@@ -30,7 +26,6 @@ reviewPage = (currentPark) => {
             $("#parkPhoto").append(parkPhoto)
 // Append div of current park to review page
              $("#ReviewPage").append(currentParkDiv)
-
 
 // Make div to write review of current park
 
@@ -59,23 +54,13 @@ reviewPage = (currentPark) => {
                 $("#reviews").append(currentReview)
         }}))}))
 
-
-
             // On click of review button div opens to write review of current park
         $("#reviewButton").on("click", function () {
             console.log("review clicked")
             $("#reviewRating").empty()
-            submitReview(park.park_name, index)
+            submitReview(park.park_name)
         })
-        }
-}))
-
+    })
 }
 
 module.exports = reviewPage
-
-
-
-
-
-

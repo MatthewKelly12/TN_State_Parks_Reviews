@@ -1,7 +1,6 @@
 const $ = require("jquery");
 const reviewManager = require("./reviewManager");
 const activeUser = require("./activeUser");
-
 // editedReview function will allow user to click on a review
 //  and edit it and submit it back to the database
 editedReview = (id) => {
@@ -45,18 +44,12 @@ editedReview = (id) => {
              timeStamp: new Date()
         }
         console.log(editedReview)
-        reviewManager.updateReviews(id, editedReview);
-        $("#editedReviews").empty()
-        $("#editedReviews").hide()
-        $("#profileReviews").show()
-        $("#profileInfo").empty();
-        $("#profileReviews").empty();
-        profile(user.id, user.username);
+        reviewManager.updateReviews(id, editedReview)
+        .then(() => {
+            $("#editedReviews").hide()
+            profile(user.id, user.username);
+        })
     })
     })
 }
-
 module.exports = editedReview
-
-
-
