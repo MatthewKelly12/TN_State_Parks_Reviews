@@ -1,30 +1,27 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 const reviewPage = require("./reviewPage");
-const parksInformation = require("./parkInformation");
-
-// Create variable to hold current park that gets clicked/selected
-
-homePage = () => {
-    $("#HomePage").empty();
-// Ajax call to get all park locations and make a div for each park w/name and location
+const switchView = require("./switchView");
+hikingParks = () => {
+    $("#hikingParks").empty();
     parksManager.getAllParks().then(
         parks => {
             parks.forEach(
                 (park, index) => {
-                const parkDiv =
-                    `<div id="park${index}" class="allParks">
-                        <h3>${park.park_name}</h3>
-                        <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
+                if (park.hiking_trails === "Yes") {
+                   const hikingDiv =
+                    `<div id="hiking${index}" class="allParks">
+                        <h2>${park.park_name}</h2>
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
-                        <button id="buttonDetails${index}">Details</button>
-                    </div>`
-                // Append div of parks to home page
-                $("#HomePage").append(parkDiv)
-
+                        <button id="buttonhikingDetails${index}">Details</button>
+                     </div>`
+                // Append div of dog parks to home page
+                $("#hikingParks").append(hikingDiv)
                 // Details button on click will assign park clicked on to current park, hide homepage and show review page  of current park selected
-                $(`#buttonDetails${index}`).on("click", function () {
+                $(`#buttonhikingDetails${index}`).on("click", evt =>
+                    console.log(evt.target.parentElement))
+                    .on("click", function () {
                         let currentPark = park.park_name;
                         console.log(currentPark)
                         reviewPage(currentPark);
@@ -32,10 +29,9 @@ homePage = () => {
                         parksInformation(currentPark);
                         switchView("#review");
                     })
-                }
+                }}
             )
         }
     )
 }
-
-module.exports = homePage
+module.exports = hikingParks

@@ -1,84 +1,69 @@
 const $ = require("jquery");
-const homePage = require("./homePage");
-const reviewPage = require("./reviewPage");
 const userManager = require("./userManager");
 const activeUser = require("./activeUser");
 const signUp = require("./signUp");
-const navBar = require("./navBar");
-const profile = require("./profile");
 const options = require("./options");
-const parksManager = require("./parksManager");
+const switchView = require("./switchView")
 
-
-// Hide all pages execpt Log In page
-$(document).ready(function () {
-    $("#HomePage").hide();
-    $("#ReviewPage").hide();
-    $("#signUpPage").hide();
-    $("#navBar").hide();
-    $("#profilePage").hide();
-    $("#options").hide();
-    $("#parkContainer").hide()
-});
-
-
-
- logIn = () => {
-    // Create variable to hold log in form
-  const logo = `
-  <img src="./logo-1.png" class="logo">`
-  const logInDiv =
-    `<div id="mainLogIn">
-        <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
-        <p><input id="inputEmail" type="password" placeholder="Password"></input></p>
-        <p><button id="buttonLogIn" class="btn info">Log In</button></p>
-        <p><button id="buttonSignUp" class="btn info">Sign Up</button></p>
-    </div>`
-
-    // Append log in form to log in page
-    $("#LogIn").append(logo)
-    $("#LogIn").append(logInDiv)
-
-//  Sign Up button on click will call signUp function which hides log in and shows sign up page
-    $("#buttonSignUp").on("click", function () {
-        signUp();
-    })
-
-    // Log In button on click will log in user, hide log in page, and show home page
-    $("#buttonLogIn").on("click", function () {
-
+validateUser = () => {
+    console.log("VALIDATE USER RUNNING")
     // Make ajax call to get all users, then check to see if username and email are both valid,if so log in sets acive user and set to session storage, else alert user
-        userManager.getAllUsers().then(
-            user => {
-                let valid = false
-                user.forEach(user => {
-                    if ($("#inputUserName").val() === user.username && $("#inputEmail").val() === user.password) {
-                        activeUser.saveActiveUser(user);
-                        valid = true
-                        $("#LogIn").hide();
-                        // $("#HomePage").show();
-                        options();
-                        $("#options").show();
-                        $("#navBar").show();
-                    }
-                })
-                let userCurrent = activeUser.getActiveUser()
-                    console.log(JSON.stringify(userCurrent))
-                if (userCurrent) {
-                    profile(userCurrent.id, userCurrent.username)
+    userManager.getAllUsers().then(
+        user => {
+            let valid = false
+            user.forEach(user => {
+                if ($("#inputUserName").val() === user.username && $("#inputEmail").val() === user.password) {
+                    activeUser.saveActiveUser(user);
+                    valid = true
+                    $("#LogIn").hide();
+                    options();
+                    // $("#options").show();
+                    $("#navBar").show();
                 }
-                if(!valid) {
-                    alert("Must Enter Valid User Name and Email Or Sign Up")
-                     $("#inputUserName").val("");
-                     $("#inputEmail").val("");
-                }
+            })
+            if(!valid) {
+                alert("Must Enter Valid User Name and Email Or Sign Up")
+                $("#inputUserName").val("");
+                $("#inputEmail").val("");
             }
-        )
-    })
+        }
+    )
+}
+
+logIn = () => {
+    $("#LogIn").empty();
+    if(activeUser.getActiveUser()) {
+        console.log("ACTIVE USER EXISTS")
+        $("#LogIn").hide();
+        options();
+        // $("#options").show();
+        $("#navBar").show();
+    } else {
+        console.log("ACTIVE USER DOES NOT EXIST")
+        // Hide all pages execpt Log In page
+        switchView("#LogIn")
+        $("#navBar").hide();
+    // Create variable to hold log in form
+    const logo = `
+    <img src="./logo-1.png" class="logo">`
+    const logInDiv =
+        `<div id="mainLogIn">
+            <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
+            <p><input id="inputEmail" type="password" placeholder="Password"></input></p>
+            <p><button id="buttonLogIn" class="btn info">Log In</button></p>
+            <p><button id="buttonSignUp" class="btn info">Sign Up</button></p>
+        </div>`
+
+        // Append log in form to log in page
+        $("#LogIn").append(logo)
+        $("#LogIn").append(logInDiv)
+
+    //  Sign Up button on click will call signUp function which hides log in and shows sign up page
+        $("#buttonSignUp").on("click", signUp)
+
+        // Log In button on click will log in user, hide log in page, and show home page
+        $("#buttonLogIn").on("click", validateUser)
+    }
 }
 
 module.exports = logIn;
-
-
-
-

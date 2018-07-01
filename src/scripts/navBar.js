@@ -1,6 +1,8 @@
 const $ = require("jquery");
 const activeUser = require("./activeUser");
 const profile = require("./profile");
+const switchView = require("./switchView");
+const logIn = require("./logIn")
 
 navBar = () => {
      const navBar =
@@ -13,33 +15,18 @@ navBar = () => {
 
 
     $("#home").on("click", function () {
-        $("#ReviewPage").hide()
-        $("#HomePage").show()
-        $("#navBar").show()
-        $("#reviews").empty()
-        $("#reviews").hide()
-        $("#profilePage").hide();
-        $("#parkContainer").hide();
+        switchView("#options");
+        options();
     })
 
     $("#logOut").on("click", function () {
-        $("#review").hide()
-        $("#HomePage").hide()
         activeUser.clearActiveUser()
-        $("#navBar").hide()
-        $("#profilePage").hide();
-        $("#LogIn").show()
-        $("#inputUserName").val("");
-        $("#inputEmail").val("");
+        logIn();
      })
 
      $("#profile").on("click", function () {
-        $("#review").hide()
-        $("#HomePage").hide()
-        $("#profilePage").show()
-        $("#profileInfo").empty();
-        $("#editedReviews").empty();
-        $("#profileReviews").empty();
+        console.log("PROFILE clicked")
+        switchView("#profilePage");
         let user = activeUser.getActiveUser()
         profile(user.id, user.username);
      })

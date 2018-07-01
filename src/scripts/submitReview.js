@@ -3,50 +3,44 @@ const reviewManager = require("./reviewManager");
 const activeUser = require("./activeUser");
 const avgRating = require("./avgRating");
 
-submitReview = (parkName, index) => {
+submitReview = (parkName) =>{
         const reviewDiv =
                 `<div>
-                   <h2>Please Rate</h2>
-                   <h2>
-                        <span class="fa fa-star black"></span>
-                        <span class="fa fa-star black"></span>
-                        <span class="fa fa-star black"></span>
-                        <span class="fa fa-star black"></span>
-                        <span class="fa fa-star black"></span>
-                    <select id="rating${index}">
+                   <h2>Please Rate
+                    <select id="rating">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select></h2>
-                   <p><input id="reviewTitle${index}" type="text" placeholder="Title"></input></p>
-                   <p><input id="reviewComments${index}" type="text" placeholder="Comments"></input></p>
-                   <p><button id="submitReviewButton${index}">Submit Review</button></p>
+                   <p><input id="reviewTitle" type="text" placeholder="Title"></input></p>
+                   <p><input id="reviewComments" type="text" placeholder="Comments"></input></p>
+                   <p><button id="submitReviewButton">Submit Review</button></p>
                 </div>`
     $("#reviewRating").append(reviewDiv)
     $("#reviewRating").show()
 
-    $(`#submitReviewButton${index}`).on("click", function () {
+    $("#submitReviewButton").on("click", function () {
         let user = (activeUser.getActiveUser())
+             console.log(user.id)
         let reviewInfo = {
             park_name: parkName,
             userId: user.id,
-            rating: $(`#rating${index}`).val(),
-            title: $(`#reviewTitle${index}`).val(),
-            comments: $(`#reviewComments${index}`).val(),
+            rating: $("#rating").val(),
+            title: $("#reviewTitle").val(),
+            comments: $("#reviewComments").val(),
             timeStamp: new Date()
         }
             console.log(reviewInfo)
             reviewManager.createReview(reviewInfo);
-            $("#parkPhoto").empty()
             $("#reviewRating").empty()
             $("#reviewRating").hide()
             $("#ReviewPage").empty()
             $("#reviews").empty()
-            // $("#parkInfo").empty()
             reviewPage(parkName)
             avgRating(parkName)
+            parksInformation(parkName)
          })
 }
 
