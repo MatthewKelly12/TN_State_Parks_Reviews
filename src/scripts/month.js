@@ -1,26 +1,26 @@
 monthOfYear = (month) => {
     switch(month) {
-        case 1 : return "January"
+        case 0 : return "January"
             break;
-        case 2: return "February"
+        case 1: return "February"
             break;
-        case 3 : return "March"
+        case 2 : return "March"
             break;
-        case 4: return "April"
+        case 3: return "April"
             break;
-        case 5 : return "May"
+        case 4 : return "May"
             break;
-        case 6: return "June"
+        case 5: return "June"
             break;
-        case 7 : return "July"
+        case 6 : return "July"
             break;
-        case 8: return "August"
+        case 7: return "August"
             break;
-        case 9 : return "September"
+        case 8 : return "September"
             break;
-        case 10: return "October"
+        case 9: return "October"
             break;
-        case 11 : return "November"
+        case 10 : return "November"
             break;
         case 12: return "December"
             break;

@@ -6,7 +6,7 @@ communityGardenInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.community_garden === "Yes")  {
              const community = `
-            <div id="communityGarden${index}">Community Garden</div>`
+            <div id="communityGarden${index}"><h3>Community Garden</h3></div>`
             $("#parkInfo").append(community);
         }})
     })

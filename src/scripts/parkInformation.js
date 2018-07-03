@@ -21,6 +21,7 @@ const soccerInfo = require("./soccerInfo")
 const sprayparkInfo = require("./sprayparkInfo")
 const tennisInfo = require("./tennisInfo")
 const walkingInfo = require("./walkingInfo")
+const swimmingInfo = require("./swimmingInfo")
 
 parksInformation = (currentPark) => {
     // avgRating(currentPark)
@@ -37,6 +38,7 @@ parksInformation = (currentPark) => {
     hikingInfo(currentPark)
     horseTrailInfo(currentPark)
     lakeInfo(currentPark)
+    mountainBikeInfo(currentPark)
     picnicInfo(currentPark)
     playgroundInfo(currentPark)
     restroomsInfo(currentPark)
@@ -46,6 +48,7 @@ parksInformation = (currentPark) => {
     tennisInfo(currentPark)
     volleyballInfo(currentPark)
     walkingInfo(currentPark)
+    swimmingInfo(currentPark)
 }
 
 module.exports = parksInformation

@@ -6,7 +6,7 @@ dogParkInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.dog_park === "Yes")  {
              const dogPark = `
-            <div id="dogParkInfo${index}">Dog Park</div>`
+            <div id="dogParkInfo${index}"><h3>Dog Park</h3></div>`
             $("#parkInfo").append(dogPark);
         }})
     })

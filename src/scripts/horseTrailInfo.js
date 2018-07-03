@@ -6,7 +6,7 @@ horseTrailInfo = (currentPark) => {
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.horse_trails === "Yes")  {
              const horseTrail = `
-            <div id="horseTrailInfo${index}">Horse Trails</div>`
+            <div id="horseTrailInfo${index}"><h3>Horse Trails</h3></div>`
             $("#parkInfo").append(horseTrail);
         }})
     })
