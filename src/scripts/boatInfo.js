@@ -1,6 +1,8 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 
+// function checks database to see if park has boat launch/ramp
+// and if so builds div and appends to park info
 boatInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {

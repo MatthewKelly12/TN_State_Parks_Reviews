@@ -1,6 +1,9 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 
+// function checks database to see if park has a golf course
+// and if so builds div and appends to park info
+
 golfInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         console.log(parks)

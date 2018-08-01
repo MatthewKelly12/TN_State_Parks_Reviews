@@ -1,6 +1,10 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 
+
+// function checks database to see if park allows fishing by permit
+// and if so builds div and appends to park info
+
 fishingInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {

@@ -1,6 +1,9 @@
 const $ = require("jquery");
 const parksManager = require("./parksManager");
 
+// function checks database to see if park has mountain bike trails
+// and if so builds div and appends to park info
+
 mountainBikeInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
         parks.forEach((park, index) => {

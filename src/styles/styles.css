@@ -243,8 +243,10 @@ ul {
     overflow: hidden;
     /* background-color: #333; */
     /* background-color: green; */
-    background-color: #0A1924
+    /* background-color: #0A1924 */
+    background-color: #1F401A;
     /* height: 150px; */
+    border-bottom: 2px solid white;
 }
 
 li {
@@ -302,29 +304,33 @@ li a:hover {
 
 .bodyStyleMain {
     background-color: green;
-    font-family: verdana;
     font-size: 100%;
     /* color: #ffffff; */
-    /* background-image: url("./trees_Smaller.jpg"); */
+    background-image: url("./trees_opac.png");
     margin-top: 100px;
     background-attachment: fixed;
 }
 h1 {
-    color: yellow
+    color: yellow;
+    font-family: 'Shadows Into Light', cursive;
+    /* font-family: "Comic Sans MS", cursive, sans-serif */
 }
 
 h2 {
     color: yellow
+
 }
+
 h3 {
-    color: yellow
+    color: yellow;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 340px;
+    width: 290px;
     height: 340px;
 }
 
@@ -376,6 +382,11 @@ h3 {
 .info:hover {
     background: #0b7dda;
 }
+
+.btnColor {
+    /* background-color: #1F401A; */
+    background-color: #01375B
+}
 /*
 .options {
     border: 1px solid white;
@@ -395,6 +406,9 @@ h3 {
     margin: 10px;
     text-align: center;
     /* background-color: green; */
+    /* font-family: 'PT Sans Narrow', sans-serif; */
+    /* font-family: 'Shadows Into Light', cursive; */
+    font-family: 'Shrikhand', cursive;
 }
 
 p {

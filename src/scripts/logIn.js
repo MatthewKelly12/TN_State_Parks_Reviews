@@ -50,12 +50,12 @@ logIn = () => {
         $("body").addClass("bodyStyleLogIn")
     // Create variable to hold log in form
     const logo = `
-    <img src="./images/logoParks.png" class="logo">`
+    <img src="./images/TN_ST_PARKS_LOGO.png" class="logo">`
     const logInDiv =
         `<div id="mainLogIn">
             <p><input class="inputLogIn" id="inputUserName" type="text" placeholder="User Name"></input></p>
             <p><input class="inputLogIn" id="inputEmail" type="password" placeholder="Password"></input></p>
-            <p><button id="buttonLogIn" class="btn info">Log In</button></p>
+            <p><button id="buttonLogIn" class="btn btnColor">Log In</button></p>
             <p><button id="buttonSignUp" class="btn info">Sign Up</button></p>
         </div>`
 
