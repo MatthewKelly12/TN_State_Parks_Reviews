@@ -6,7 +6,6 @@ const parksManager = require("./parksManager");
 
 golfInfo = (currentPark) => {
     parksManager.getAllParks().then(parks => {
-        console.log(parks)
         parks.forEach((park, index) => {
         if (park.park_name === currentPark && park.golf_course === "Yes")  {
              const golf = `

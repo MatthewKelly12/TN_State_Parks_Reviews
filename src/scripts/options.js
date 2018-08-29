@@ -18,20 +18,20 @@ const TennisParks = require("./tennisParks");
 const VolleyballParks = require("./volleyballParks");
 const imageOptions = require("./imageOptions");
 
-// const HomePage = require("./homePage");
 
 options = () => {
     $("#options").empty();
     const categories = ["All Parks",  "ADA Accessible", "Baseball Fields", "Basketball Courts", "Boat Launch", "Community Garden", "Disc Golf", "Dog Park", "Hiking Trails", "Lake",  "Mountain Bike Trails",  "Skate Park",  "Soccer Fields", "Tennis Courts", "Volleyball Courts"];
     categories.forEach((category, index) => {
-        // let parkImg = `
-        // <img src="./images/park-16.png" width="300" height="300">`
-        let parkImg = imageOptions(category);
+
+		let parkImg = imageOptions(category);
+
         let optionDiv =
           `<div id="category${index}" class="optionDiv">
                <h1>${category}</h1>
                <p>${parkImg}</p>
-            </div>`
+			</div>`
+
         $("#options").append(optionDiv)
         $(`#category${index}`).on("click", function () {
             if (category === "All Parks") {

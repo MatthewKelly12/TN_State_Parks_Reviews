@@ -25,14 +25,14 @@ adaParks = () => {
                 // Append div of parks to home page
 				$("#adaParks").append(adaDiv)
 
-				// Details button on click will assign park clicked on to current park,
-				// hide homepage and show review page  of current park selected
+				// Details button on click will assign park clicked on
+				// //  to current park, hide homepage and show review
+				// page  of current park selected
 
-                $(`#buttonAdaDetails${index}`).on("click", evt =>
-                    console.log(evt.target.parentElement))
-                    .on("click", function () {
+
+                $(`#buttonAdaDetails${index}`).on("click",
+                    function () {
                         let currentPark = park.park_name;
-                        console.log(currentPark)
                         reviewPage(currentPark);
                         avgRating(currentPark);
                         parksInformation(currentPark);

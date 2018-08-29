@@ -7,7 +7,9 @@ const switchView = require("./switchView")
 
 validateUser = () => {
     console.log("VALIDATE USER RUNNING")
-    // Make ajax call to get all users, then check to see if username and email are both valid,if so log in sets acive user and set to session storage, else alert user
+	// Make ajax call to get all users, then check to see
+	//  if username and email are both valid. If so, log in
+	// sets acive user and set to session storage, else alert user
     userManager.getAllUsers().then(
         user => {
             let valid = false
@@ -18,9 +20,7 @@ validateUser = () => {
                     $("#LogIn").hide();
                     $("body").removeClass("bodyStyleLogIn")
                     $("body").addClass("bodyStyleMain")
-                    // $("body").css("background-image", "none")
                     options();
-                    // $("#options").show();
                     $("#navBar").show();
                 }
             })
@@ -39,7 +39,6 @@ logIn = () => {
         console.log("ACTIVE USER EXISTS")
         $("#LogIn").hide();
         options();
-        // $("#options").show();
         $("#navBar").show();
     } else {
         console.log("ACTIVE USER DOES NOT EXIST")
@@ -47,10 +46,12 @@ logIn = () => {
         switchView("#LogIn")
         $("#navBar").hide();
         $("body").removeClass("bodyStyleMain")
-        $("body").addClass("bodyStyleLogIn")
+		$("body").addClass("bodyStyleLogIn")
+
     // Create variable to hold log in form
     const logo = `
-    <img src="./images/TN_ST_PARKS_LOGO.png" class="logo">`
+	<img src="./images/TN_ST_PARKS_LOGO.png" class="logo">`
+
     const logInDiv =
         `<div id="mainLogIn">
             <p><input class="inputLogIn" id="inputUserName" type="text" placeholder="User Name"></input></p>

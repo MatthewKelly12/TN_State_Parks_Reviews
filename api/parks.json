@@ -161,6 +161,15 @@
       "zip": "37205",
       "timeStamp": "Fri Jul 13 2018 19:51:36 GMT-0500 (Central Daylight Time)",
       "id": 18
+    },
+    {
+      "username": "Stephen",
+      "password": "none",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37205",
+      "timeStamp": "Sat Aug 04 2018 23:04:44 GMT-0500 (Central Daylight Time)",
+      "id": 19
     }
   ],
   "reviews": [
@@ -203,11 +212,20 @@
     {
       "park_name": "Whitsett Park",
       "userId": "1",
-      "rating": "4",
+      "rating": "5",
       "title": "Awesome",
       "comments": "My friend Jessica is in charge of the garden. It's awesome!",
-      "timeStamp": "Fri Jul 13 2018 19:49:19 GMT-0500 (Central Daylight Time)",
+      "timeStamp": "Wed Aug 29 2018 12:44:13 GMT-0500 (Central Daylight Time)",
       "id": 78
+    },
+    {
+      "park_name": "Green Hills Park",
+      "userId": "19",
+      "rating": "4",
+      "title": "oops",
+      "comments": "uuuuu",
+      "timeStamp": "Sat Aug 04 2018 23:07:17 GMT-0500 (Central Daylight Time)",
+      "id": 79
     }
   ]
 }
