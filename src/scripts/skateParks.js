@@ -12,7 +12,7 @@ skateParks = () => {
                 (park, index) => {
                 if (park.skate_park === "Yes") {
 
-					// builds card to display park on page
+					        // builds card to display park on page
 
                    const skateDiv =
                     `<div id="skate${index}" class="allParks">
@@ -21,10 +21,10 @@ skateParks = () => {
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttonskateDetails${index}">Details</button>
-					 </div>`
+					            </div>`
 
                 // Append div of parks to home page
-				$("#skateParks").append(skateDiv)
+				        $("#skateParks").append(skateDiv)
 
                 // Details button on click will assign park clicked on to current park, hide homepage and show review page  of current park selected
                 $(`#buttonskateDetails${index}`).on("click", evt =>

@@ -11,8 +11,8 @@ baseballParks = () => {
             parks.forEach(
                 (park, index) => {
                 if (park.baseball_fields === "Yes") {
-				   const baseballDiv =
 
+				   const baseballDiv =
 				   	// builds card to display park on page
                     `<div id="baseball${index}" class="allParks">
                         <h3>${park.park_name}</h3>
@@ -25,13 +25,14 @@ baseballParks = () => {
                 // Append div of dog parks to home page
 				$("#baseballParks").append(baseballDiv)
 
-				// Details button on click will assign park clicked on to current park,
-				// hide homepage and show review page  of current park selected
-                $(`#buttonbaseballDetails${index}`).on("click", evt =>
-                    console.log(evt.target.parentElement))
-                    .on("click", function () {
+				// Details button on click will assign park clicked on
+        // to current park, hide homepage and show 
+        // review page  of current park selected
+                  
+                  
+                $(`#buttonbaseballDetails${index}`).on("click",
+                    function () {
                         let currentPark = park.park_name;
-                        console.log(currentPark)
                         reviewPage(currentPark);
                         avgRating(currentPark);
                         parksInformation(currentPark);

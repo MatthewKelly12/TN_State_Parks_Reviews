@@ -20,15 +20,15 @@ reviewPage = (currentPark) => {
                     <p class="parkAddress">${park.mapped_location_address}</p>
                     <p class="parkAddress">${park.mapped_location_city}, ${park.mapped_location_state}</p>
                     <p class="parkAddress"><button id="reviewButton">Write Review</button></p>
-				 </div>`
+				          </div>`
 
 
         const parkPhoto = `
         	<img src="./images/park-16.png" height="400" width="450" class"optionImg">`
             $("#parkPhoto").append(parkPhoto)
-			// Append div of current park to review page
-             $("#ReviewPage").append(currentParkDiv)
-
+			      // Append div of current park to review page
+            $("#ReviewPage").append(currentParkDiv)
+      
  // Make ajax call to get reviews of current park and display in #reviews div
     reviewManager.getAllReviews().then(reviews =>
         reviews.forEach(review => {

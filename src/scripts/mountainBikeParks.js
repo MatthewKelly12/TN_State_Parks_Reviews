@@ -12,7 +12,7 @@ mountainBikeParks = () => {
                 (park, index) => {
                 if (park.mountain_bike_trails === "Yes") {
 
-					// builds card to display park on page
+					         // builds card to display park on page
 
                    const mountainBikeDiv =
                     `<div id="mountainBike${index}" class="allParks">
@@ -21,10 +21,10 @@ mountainBikeParks = () => {
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttonmountainBikeDetails${index}">Details</button>
-					 </div>`
+					            </div>`
 
                 // Append div of parks to home page
-				$("#mountainBikeParks").append(mountainBikeDiv)
+				        $("#mountainBikeParks").append(mountainBikeDiv)
 
 				// Details button on click will assign park clicked on to current park,
 				//  hide homepage and show review page  of current park selected

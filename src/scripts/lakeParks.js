@@ -11,8 +11,8 @@ lakeParks = () => {
             parks.forEach(
                 (park, index) => {
                 if (park.lake === "Yes") {
-
-					// builds card to display park on page
+  
+					         // builds card to display park on page
 
                    const lakeDiv =
                     `<div id="lake${index}" class="allParks">
@@ -21,13 +21,13 @@ lakeParks = () => {
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttonlakeDetails${index}">Details</button>
-					 </div>`
+					            </div>`
 
                 // Append div of parks to home page
-				$("#lakeParks").append(lakeDiv)
+				        $("#lakeParks").append(lakeDiv)
 
-				// Details button on click will assign park clicked on to current park,
-				// hide homepage and show review page  of current park selected
+				        // Details button on click will assign park clicked on to current park,
+				        // hide homepage and show review page  of current park selected
 
                 $(`#buttonlakeDetails${index}`).on("click", evt =>
                     console.log(evt.target.parentElement))

@@ -30,7 +30,7 @@ options = () => {
           `<div id="category${index}" class="optionDiv">
                <h1>${category}</h1>
                <p>${parkImg}</p>
-			</div>`
+			     </div>`
 
         $("#options").append(optionDiv)
         $(`#category${index}`).on("click", function () {
@@ -73,7 +73,7 @@ options = () => {
                 console.log("Disc Golf CONDITION")
                 switchView("#discGolfParks");
                 discGolfParks();
-            }
+            } 
             if (category === "Hiking Trails"){
                 console.log("Hiking Trails/Path CONDITION")
                 switchView("#hikingParks");

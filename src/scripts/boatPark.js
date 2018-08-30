@@ -12,7 +12,7 @@ boatPark = () => {
                 (park, index) => {
                 if (park.boat_launch === "Yes") {
 
-					// builds card to display park on page
+					        // builds card to display park on page
                    const boatDiv =
                     `<div id="boat${index}" class="allParks">
                         <h2>${park.park_name}</h2>
@@ -20,13 +20,13 @@ boatPark = () => {
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttonBoatDetails${index}">Details</button>
-					 </div>`
+					           </div>`
 
                 // Append div of boat parks to home page
-				$("#boatParks").append(boatDiv)
+				        $("#boatParks").append(boatDiv)
 
-				// Details button on click will assign park clicked on to current park,
-				// hide homepage and show review page  of current park selected
+				        // Details button on click will assign park clicked on to current park,
+				        // hide homepage and show review page  of current park selected
 
                 $(`#buttonBoatDetails${index}`).on("click", evt =>
                     console.log(evt.target.parentElement))

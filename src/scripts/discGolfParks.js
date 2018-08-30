@@ -13,7 +13,7 @@ discGolfParks = () => {
                 if (park.disc_golf=== "Yes") {
 
 
-					// builds card to display park on page
+					         // builds card to display park on page
 
                    const discGolfDiv =
                     `<div id="discGolf${index}" class="allParks">
@@ -22,7 +22,7 @@ discGolfParks = () => {
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttondiscGolfDetails${index}">Details</button>
-					 </div>`
+					          </div>`
 
                 // Append div of dog parks to home page
 				$("#discGolfParks").append(discGolfDiv)
