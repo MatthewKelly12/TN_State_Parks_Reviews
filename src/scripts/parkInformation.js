@@ -38,6 +38,7 @@ parksInformation = (currentPark) => {
     hikingInfo(currentPark)
     horseTrailInfo(currentPark)
     lakeInfo(currentPark)
+    mountainBikeInfo(currentPark)
     picnicInfo(currentPark)
     playgroundInfo(currentPark)
     restroomsInfo(currentPark)

@@ -17,7 +17,7 @@ profile = (id, name) => {
                 const year =  date.getFullYear();
    console.log(user.timeStamp)
 
-    const profileDiv = `<div id="profileDiv"><h1>${name}</h1><i class="fa fa-user" style="font-size:75px"></i><p>Member Since ${month}, ${day} ${year}</p></div>`
+    const profileDiv = `<div id="profileDiv"><h1>${name}</h1><i class="fa fa-user white" style="font-size:75px"></i><p>Member Since ${month}, ${day} ${year}</p></div>`
     $("#profileInfo").append(profileDiv)
 
     reviewManager.getAllReviews().then(reviews =>{
@@ -34,9 +34,10 @@ profile = (id, name) => {
         reviewStars = stars(parseInt(review.rating));
         if (id === reviewUserId) {
           const profileReviewDiv =
-             `<div id=${review.park_name}>
-                <h3>${review.park_name} ${month}, ${day} ${year}</h3>
-                <h3>${review.rating} Stars ${reviewStars}</h3>
+          // ${review.rating} Stars
+             `<div id=${review.park_name} class="profileReviews">
+                <h2>${review.park_name}     ${reviewStars}</h2>
+                <p>${month}, ${day} ${year}</p>
                 <p>${review.title}</p>
                 <p>${review.comments}</p>
                 <button id="deleteReview${index}">Delete</button> <button id="editReview${index}">Edit</button>

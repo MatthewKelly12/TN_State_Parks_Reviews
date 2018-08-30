@@ -8,9 +8,9 @@ editedReview = (id) => {
     reviewManager.getSingleReview(id).then(review => {
     // Build variable to hold div of edited review
         const editedReviewDiv =
-         `<div>
+         `<div class="writeReview">
             <h2>Please Rate
-            <select id="editedRating${id}">
+            <select id="editedRating${id}" >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -19,7 +19,7 @@ editedReview = (id) => {
             </select></h2>
             <p><input id="editedTitle${id}" type="text" placeholder="Title"></input></p>
             <p><input id="editedComments${id}" type="text" placeholder="Comments"></input></p>
-            <p><button id="editedReviewButton${id}">Submit Review</button></p>
+            <p><button class="editSubmitButton" id="editedReviewButton${id}">Submit Review</button></p>
         </div>`
         //Append editedReviw div
     $("#editedReviews").append(editedReviewDiv)

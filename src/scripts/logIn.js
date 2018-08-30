@@ -7,7 +7,9 @@ const switchView = require("./switchView")
 
 validateUser = () => {
     console.log("VALIDATE USER RUNNING")
-    // Make ajax call to get all users, then check to see if username and email are both valid,if so log in sets acive user and set to session storage, else alert user
+	// Make ajax call to get all users, then check to see
+	//  if username and email are both valid. If so, log in
+	// sets acive user and set to session storage, else alert user
     userManager.getAllUsers().then(
         user => {
             let valid = false
@@ -16,8 +18,9 @@ validateUser = () => {
                     activeUser.saveActiveUser(user);
                     valid = true
                     $("#LogIn").hide();
+                    $("body").removeClass("bodyStyleLogIn")
+                    $("body").addClass("bodyStyleMain")
                     options();
-                    // $("#options").show();
                     $("#navBar").show();
                 }
             })
@@ -36,21 +39,24 @@ logIn = () => {
         console.log("ACTIVE USER EXISTS")
         $("#LogIn").hide();
         options();
-        // $("#options").show();
         $("#navBar").show();
     } else {
         console.log("ACTIVE USER DOES NOT EXIST")
         // Hide all pages execpt Log In page
         switchView("#LogIn")
         $("#navBar").hide();
+        $("body").removeClass("bodyStyleMain")
+		$("body").addClass("bodyStyleLogIn")
+
     // Create variable to hold log in form
     const logo = `
-    <img src="./logo-1.png" class="logo">`
+	<img src="./images/TN_ST_PARKS_LOGO.png" class="logo">`
+
     const logInDiv =
         `<div id="mainLogIn">
-            <p><input id="inputUserName" type="text" placeholder="User Name"></input></p>
-            <p><input id="inputEmail" type="password" placeholder="Password"></input></p>
-            <p><button id="buttonLogIn" class="btn info">Log In</button></p>
+            <p><input class="inputLogIn" id="inputUserName" type="text" placeholder="User Name"></input></p>
+            <p><input class="inputLogIn" id="inputEmail" type="password" placeholder="Password"></input></p>
+            <p><button id="buttonLogIn" class="btn btnColor">Log In</button></p>
             <p><button id="buttonSignUp" class="btn info">Sign Up</button></p>
         </div>`
 

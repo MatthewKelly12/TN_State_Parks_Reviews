@@ -17,18 +17,18 @@ reviewPage = (currentPark) => {
                     <h1>${park.park_name}</h1>
                     <h2>Est. ${park.year_established}</h2>
                     <h2>${park.acres} Acres</h2>
-                    <p>${park.mapped_location_address}</p>
-                    <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
-                    <p><button id="reviewButton">Write Review</button></p>
-                 </div>`
-            const parkPhoto = `
-            <img src="./images/park-16.png" height="400" width="450" class"optionImg">`
+                    <p class="parkAddress">${park.mapped_location_address}</p>
+                    <p class="parkAddress">${park.mapped_location_city}, ${park.mapped_location_state}</p>
+                    <p class="parkAddress"><button id="reviewButton">Write Review</button></p>
+				          </div>`
+
+
+        const parkPhoto = `
+        	<img src="./images/park-16.png" height="400" width="450" class"optionImg">`
             $("#parkPhoto").append(parkPhoto)
-// Append div of current park to review page
-             $("#ReviewPage").append(currentParkDiv)
-
-// Make div to write review of current park
-
+			      // Append div of current park to review page
+            $("#ReviewPage").append(currentParkDiv)
+      
  // Make ajax call to get reviews of current park and display in #reviews div
     reviewManager.getAllReviews().then(reviews =>
         reviews.forEach(review => {
@@ -45,18 +45,18 @@ reviewPage = (currentPark) => {
                 let reviewStars = undefined;
                 reviewStars = stars(parseInt(review.rating));
                  const currentReview =
+                //  ${review.rating} Stars
                  `<div id="currentReviews">
-                    <h3>${user.username} ${month}, ${day} ${year}</h3>
-                    <p>${review.rating} Stars ${reviewStars}</span></p>
+                    <h2>${user.username}     ${reviewStars}</h2>
+                    <p>${month}, ${day} ${year}</p>
                     <p>${review.title}</p>
                     <p>${review.comments}</p>
                  </div>`
                 $("#reviews").append(currentReview)
         }}))}))
 
-            // On click of review button div opens to write review of current park
+        // On click of review button div opens to write review of current park
         $("#reviewButton").on("click", function () {
-            console.log("review clicked")
             $("#reviewRating").empty()
             submitReview(park.park_name)
         })

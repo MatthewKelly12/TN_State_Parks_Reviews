@@ -16,18 +16,22 @@ const SkateParks = require("./skateParks");
 const soccerParks = require("./soccerParks");
 const TennisParks = require("./tennisParks");
 const VolleyballParks = require("./volleyballParks");
+const imageOptions = require("./imageOptions");
 
-// const HomePage = require("./homePage");
 
 options = () => {
     $("#options").empty();
-    const categories = ["All Parks",  "ADA Accessible", "Baseball Fields", "Basketball Courts", "Boat Launch", "Community Garden", "Disc Golf", "Dog Park", "Hiking Trails/Path", "Lake",  "Mountain Bike Trails",  "Skate Park",  "Soccer Fields", "Tennis Courts", "Volleyball Courts"];
+    const categories = ["All Parks",  "ADA Accessible", "Baseball Fields", "Basketball Courts", "Boat Launch", "Community Garden", "Disc Golf", "Dog Park", "Hiking Trails", "Lake",  "Mountain Bike Trails",  "Skate Park",  "Soccer Fields", "Tennis Courts", "Volleyball Courts"];
     categories.forEach((category, index) => {
+
+		let parkImg = imageOptions(category);
+
         let optionDiv =
           `<div id="category${index}" class="optionDiv">
                <h1>${category}</h1>
-               <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
-            </div>`
+               <p>${parkImg}</p>
+			     </div>`
+
         $("#options").append(optionDiv)
         $(`#category${index}`).on("click", function () {
             if (category === "All Parks") {
@@ -69,8 +73,8 @@ options = () => {
                 console.log("Disc Golf CONDITION")
                 switchView("#discGolfParks");
                 discGolfParks();
-            }
-            if (category === "Hiking Trails/Path"){
+            } 
+            if (category === "Hiking Trails"){
                 console.log("Hiking Trails/Path CONDITION")
                 switchView("#hikingParks");
                 hikingParks()

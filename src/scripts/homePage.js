@@ -15,7 +15,7 @@ homePage = () => {
                 const parkDiv =
                     `<div id="park${index}" class="allParks">
                         <h3>${park.park_name}</h3>
-                        <p><img src="./images/park-16.png" height="200" width="200" class"optionImg"></p>
+                        <p><img src="./images/park-16.png" class="optionImg"></p>
                         <p>${park.mapped_location_address}</p>
                         <p>${park.mapped_location_city}, ${park.mapped_location_state}</p>
                         <button id="buttonDetails${index}">Details</button>
@@ -23,7 +23,9 @@ homePage = () => {
                 // Append div of parks to home page
                 $("#HomePage").append(parkDiv)
 
-                // Details button on click will assign park clicked on to current park, hide homepage and show review page  of current park selected
+				        // Details button on click will assign park clicked on
+				        // to current park, hide homepage and show review page
+				        // of current park selected
                 $(`#buttonDetails${index}`).on("click", function () {
                         let currentPark = park.park_name;
                         console.log(currentPark)

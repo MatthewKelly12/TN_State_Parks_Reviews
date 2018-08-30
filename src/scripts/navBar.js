@@ -10,6 +10,7 @@ navBar = () => {
         <li><i style="font-size:35px"><a id="logOut">Log Out</a></i></li>
         <li><a id="profile"><i class="fa fa-user" style="font-size:50px"></i></a></li>
         <li><a id="home" class="active"><i class="fa fa-home" style="font-size:50px"></i></a></li>
+        <img src="./images/TN_ST_PARKS_LOGO.png" width="115px" height="115px" class="navImg">
     </ul>`
     $("#navBar").append(navBar)
 
