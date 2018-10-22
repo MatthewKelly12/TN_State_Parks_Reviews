@@ -9,6 +9,8 @@ Tennessee State Parks Interactive Informative Guide is a single page CRUD applic
 + JQuery
 + JSON
 + Data.Nashville.gov
++ Grunt
++ Browserify
 
 
 
