@@ -26,10 +26,8 @@ baseballParks = () => {
 				$("#baseballParks").append(baseballDiv)
 
 				// Details button on click will assign park clicked on
-        // to current park, hide homepage and show 
-        // review page  of current park selected
-                  
-                  
+        		// to current park, hide homepage and show
+				// review page  of current park selected
                 $(`#buttonbaseballDetails${index}`).on("click",
                     function () {
                         let currentPark = park.park_name;

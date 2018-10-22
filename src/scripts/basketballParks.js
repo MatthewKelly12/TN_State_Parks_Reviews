@@ -11,9 +11,8 @@ basketballParks = () => {
             parks.forEach(
                 (park, index) => {
                 if (park.basketball_courts === "Yes") {
-                  const basketballDiv =
-					
-                  // builds card to display park on page
+				const basketballDiv =
+				// builds card to display park on page
                 `<div id="basketball${index}" class="allParks">
                         <h2>${park.park_name}</h2>
                         <p><img src="./images/park-16.png" class="optionImg"></p>

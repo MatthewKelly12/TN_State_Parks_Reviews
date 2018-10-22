@@ -27,8 +27,7 @@ reviewPage = (currentPark) => {
         	<img src="./images/park-16.png" height="400" width="450" class"optionImg">`
             $("#parkPhoto").append(parkPhoto)
 			      // Append div of current park to review page
-            $("#ReviewPage").append(currentParkDiv)
-      
+			$("#ReviewPage").append(currentParkDiv);
  // Make ajax call to get reviews of current park and display in #reviews div
     reviewManager.getAllReviews().then(reviews =>
         reviews.forEach(review => {

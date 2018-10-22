@@ -11,7 +11,6 @@ lakeParks = () => {
             parks.forEach(
                 (park, index) => {
                 if (park.lake === "Yes") {
-  
 					         // builds card to display park on page
 
                    const lakeDiv =

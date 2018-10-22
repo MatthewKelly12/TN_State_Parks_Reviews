@@ -73,7 +73,7 @@ options = () => {
                 console.log("Disc Golf CONDITION")
                 switchView("#discGolfParks");
                 discGolfParks();
-            } 
+			}
             if (category === "Hiking Trails"){
                 console.log("Hiking Trails/Path CONDITION")
                 switchView("#hikingParks");
