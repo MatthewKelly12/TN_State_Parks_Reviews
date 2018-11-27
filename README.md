@@ -1,4 +1,4 @@
-![](dist/images/TN_ST_PARKS_LOGO.png)
+<img src='dist/images/TN_ST_PARKS_LOGO.png' height=200 width=180>
 
 # Tennessee State Parks Interactive Informative Guide
 
